@@ -1,0 +1,87 @@
+---
+import RdvsButton from "../widgets/RdvsButton.astro";
+---
+<header class="flex items-center bg-white   ">
+    <nav class="static h-[90px] flex w-full items-center">
+        <ul id="menu" data-status="hidden" class="duration-500  bg-white  flex  relative w-full flex-col gap-2 justify-around mt-[-350px] md:mt-[0]  md:flex-row mx-auto md:w-[90%]">
+            <li class="md:hidden">
+                <hr />
+            </li>
+            <li>
+                <a href="/">ACCUEIL!!</a>
+            </li>
+            <li>
+                <a href="/apropos">A PROPOS</a>
+            </li>
+            <li>
+                <a href="/seances">SÉANCES</a>  
+            </li>    
+            <li>
+                <a href="/temoignages">TÉMOIGNAGES</a>  
+            </li>      
+            <li>
+                <a href="/tarifs">TARIFS</a> 
+            </li>   
+            <li>
+                <a href="/letsgo">LET'S GO</a> 
+            </li> 
+            <li>
+                <a href="/contacts">CONTACTS</a> 
+            </li>
+            <li>
+                <a href="/rendezvous">
+                    <RdvsButton></RdvsButton>
+                </a>
+            </li>    
+            <li>
+               
+            </li>                                                  
+        </ul>
+        <div id="togglemenu" class= "md:hidden font-bold font text-lg" style="cursor:pointer">
+            <ion-icon name="menu" class="text-3xl text-orange-500"></ion-icon>
+        </div>
+    </nav>
+
+</header>
+
+<style>
+    
+    nav {
+        font-size: 14px;
+        height: 90px; 
+    }
+
+    nav ul li:hover {
+        text-decoration: orangered;
+        cursor: pointer;
+        color:black;
+        text-decoration-line: underline;
+        text-underline-offset: 5px;
+        text-decoration-thickness: 1px; 
+        user-select: none;
+    }
+ 
+    #togglemenu {
+        position: absolute;
+        right: 10px;
+    }
+  
+</style>
+
+<script>
+    function toggleMenu () {
+        let m = document.getElementById("menu");
+        if (!m) return;
+        let status = m.dataset.status;
+        m.dataset.status = status == "hidden" ? "visible" : "hidden"
+        if (m.dataset.status == "hidden") {
+            m.style.marginTop = "-350px"
+        }
+        else {
+            m.style.marginTop = "330px"
+        }
+           
+       
+    }
+    document.getElementById("togglemenu")?.addEventListener("click", toggleMenu)
+</script>
