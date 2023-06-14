@@ -1,14 +1,13 @@
 ---
 import RdvsButton from "../widgets/RdvsButton.astro";
+import '@fontsource/tenor-sans';
+
 ---
 <header class="flex items-center bg-white   ">
-    <nav class="static h-[90px] flex w-full items-center">
-        <ul id="menu" data-status="hidden" class="duration-500  bg-white  flex  relative w-full flex-col gap-2 justify-around mt-[-350px] md:mt-[0]  md:flex-row mx-auto md:w-[90%]">
-            <li class="md:hidden">
-                <hr />
-            </li>
+    <nav class="static h-12 flex w-full items-center md:h-[90px]">
+        <ul id="menu" data-status="hidden" class="duration-500 items-center bg-white  flex  relative w-full flex-col gap-2 justify-around mt-[-450px] md:mt-[0]  md:flex-row mx-auto md:w-[90%]">
             <li>
-                <a href="/">ACCUEIL!!</a>
+                <a href="/">ACCUEIL</a>
             </li>
             <li>
                 <a href="/apropos">A PROPOS</a>
@@ -29,15 +28,13 @@ import RdvsButton from "../widgets/RdvsButton.astro";
                 <a href="/contacts">CONTACTS</a> 
             </li>
             <li>
-                <a href="/rendezvous">
-                    <RdvsButton></RdvsButton>
-                </a>
+                <RdvsButton></RdvsButton>
             </li>    
             <li>
                
             </li>                                                  
         </ul>
-        <div id="togglemenu" class= "md:hidden font-bold font text-lg" style="cursor:pointer">
+        <div id="togglemenu" class= "md:hidden font-bold font text-lg mt-2" style="cursor:pointer">
             <ion-icon name="menu" class="text-3xl text-orange-500"></ion-icon>
         </div>
     </nav>
@@ -49,6 +46,7 @@ import RdvsButton from "../widgets/RdvsButton.astro";
     nav {
         font-size: 14px;
         height: 90px; 
+        font-family: Inter;
     }
 
     nav ul li:hover {
@@ -57,7 +55,7 @@ import RdvsButton from "../widgets/RdvsButton.astro";
         color:black;
         text-decoration-line: underline;
         text-underline-offset: 5px;
-        text-decoration-thickness: 1px; 
+        text-decoration-thickness: 0.2rem; 
         user-select: none;
     }
  
@@ -65,22 +63,31 @@ import RdvsButton from "../widgets/RdvsButton.astro";
         position: absolute;
         right: 10px;
     }
+
+    @media(max-width:760px) {
+        li {
+            margin-bottom: 25px;
+        }
+    }
   
 </style>
 
 <script>
     function toggleMenu () {
         let m = document.getElementById("menu");
+        let icon =   document?.querySelector("ion-icon");
         if (!m) return;
         let status = m.dataset.status;
         m.dataset.status = status == "hidden" ? "visible" : "hidden"
         if (m.dataset.status == "hidden") {
-            m.style.marginTop = "-350px"
+            m.style.marginTop = "-450px"
+           icon && icon.setAttribute("name", "menu") 
         }
         else {
-            m.style.marginTop = "330px"
+            m.style.marginTop = "500px"
+           icon && icon.setAttribute("name", "close")
         }
-           
+        
        
     }
     document.getElementById("togglemenu")?.addEventListener("click", toggleMenu)
