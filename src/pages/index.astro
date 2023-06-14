@@ -12,3 +12,21 @@ import Layout from "../layouts/Layout.astro";
       </div>
    </div>
 </Layout>
+
+
+<script>
+   (function styleLink  () {
+      let l = document.querySelector("[data-name='accueil']") as HTMLElement
+      l.style = `
+        text-decoration: orangered;
+        cursor: pointer;
+        color:black;
+        text-decoration-line: underline;
+        text-underline-offset: 5px;
+        text-decoration-thickness: 0.2rem; 
+        user-select: none;
+      `
+      
+
+   })()
+</script>
