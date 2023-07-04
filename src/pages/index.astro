@@ -15,8 +15,20 @@ import Info from "../components/Info.astro";
       </div>
    </section>
    <section class="bienvenue">
-      <div>
-         <h1>Bienvenue</h1>
+      <div class="backimg" style="width:50%">
+         <img src="/assets/index/francoisejean.png" alt="dame levant les yeux">
+      </div>
+      <div style="width:50%">
+         <div>
+            <h1>
+               Bienvenue
+            </h1>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia architecto ut consectetur, nesciunt nulla aliquam assumenda! Provident quibusdam corrupti dolore similique ex error maxime sunt, harum laudantium nulla non dolor.
+            </p>
+         </div>
+
+      </div>
       </div>
    </section>
    <section class="prosecenter">
@@ -31,48 +43,92 @@ import Info from "../components/Info.astro";
    </section>
    <section class="proserightmage">
       <div>
-         <h1>ProseLeftI</h1>
+         <h1>proserightmage</h1>
       </div>
    </section>  
    <section class="certificats">
       <div>
-         <h1>ProseLeftI</h1>
+         <h1>certificats</h1>
       </div>
    </section>     
    <section class="temoignages">
       <div>
-         <h1>ProseLeftI</h1>
+         <h1>temoignages</h1>
       </div>
    </section>  
 </Layout>
 
 
 <style>
-   section.hero {
+   .hero {
       display: flex;
       justify-content: space-around;
       gap: 5px;
    }
 
-   section.hero > div {
+   .hero > div {
      display: flex;
      justify-content: space-around;
      margin-top: 55px;
    
    }
 
-    img {
+   .hero img {
       width: 100%;
+      object-fit:fill;
    }
 
    .bienvenue {
-      height: 400px;
-      background: orange;
+      display:flex;
+      justify-content: space-around;
+      gap: 5px;
+      margin-top: 50px;
    }
+
+ 
+   .bienvenue > div {
+     display: flex;
+     justify-content: space-around;
+   }
+
+
+   .backimg {
+      background-image: url("/assets/index/tachebleu.png");
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: contain;
+   }
+
+   .backimg img {
+      object-fit: cover;
+      transform: scale(0.85);
+  
+   }
+
 
    .prosecenter {
       height:500px;
       background-color: darkkhaki;
+   }
+
+   .cards {
+      height:500px;
+      background-color: pink;
+   }
+   
+   .proserightmage {
+      height:500px;
+      background-color: blue;
+   }
+
+   .certificats {
+      height:500px;
+      background-color: green;
+   }
+
+   .temoignages {
+      height:500px;
+      background-color: lightcoral;
    }
 </style>
 
