@@ -1,10 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Info from "../components/Info.astro";
+import Footer from "../widgets/Footer.astro";
 ---
 
 <Layout>
-   <section>
+   <section class="hero">
       <div style="width:50%">
          <img src="/assets/index/skyseeing.png" alt="dame levant les yeux">
       </div>
@@ -13,20 +14,53 @@ import Info from "../components/Info.astro";
          <img src="/assets/index/massage.png" alt="dame levant les yeux">
       </div>
    </section>
+   <section class="bienvenue">
+      <div>
+         <h1>Bienvenue</h1>
+      </div>
+   </section>
+   <section class="prosecenter">
+      <div>
+         <h1>ProseCenter</h1>
+      </div>
+   </section>
+   <section class="cards">
+      <div>
+         <h1>Cards</h1>
+      </div>
+   </section>
+   <section class="proserightmage">
+      <div>
+         <h1>ProseLeftI</h1>
+      </div>
+   </section>  
+   <section class="certificats">
+      <div>
+         <h1>ProseLeftI</h1>
+      </div>
+   </section>     
+   <section class="temoignages">
+      <div>
+         <h1>ProseLeftI</h1>
+      </div>
+   </section> 
+   <section>
+      <Footer></Footer>
+   </section>  
 </Layout>
 
 
 <style>
-   section {
+   section.hero {
       display: flex;
       justify-content: space-around;
-      gap: 10px;
+      gap: 5px;
    }
 
-   section > div {
+   section.hero > div {
      display: flex;
      justify-content: space-around;
-      
+     margin-top: 55px;
    
    }
 
