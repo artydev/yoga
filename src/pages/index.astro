@@ -4,18 +4,37 @@ import Info from "../components/Info.astro";
 ---
 
 <Layout>
-   <div class="relative w-full flex flex-col justify-center">
-      <div class="flex flex-row justify-around gap-2">
-         <div class="bg-slate-50 w-full">
-            <img src="/assets/border.webp" alt="Astro">
-         </div>
-         <div class="bg-slate-50 w-full">
-            <img src="/assets/border.webp" alt="Astro">
-         </div>
+   <section>
+      <div style="width:50%">
+         <img src="/assets/index/skyseeing.png" alt="dame levant les yeux">
       </div>
-    
-   </div>
+   
+      <div style="width:50%">
+         <img src="/assets/index/massage.png" alt="dame levant les yeux">
+      </div>
+   </section>
 </Layout>
+
+
+<style>
+   section {
+      display: flex;
+      justify-content: space-around;
+      gap: 10px;
+   }
+
+   section > div {
+     display: flex;
+     justify-content: space-around;
+      
+   
+   }
+
+    img {
+      width: 150%;
+      object-fit: cover;
+   }
+</style>
 
 
 <script>
@@ -29,9 +48,5 @@ import Info from "../components/Info.astro";
         text-underline-offset: 5px;
         text-decoration-thickness: 0.2rem; 
         user-select: none;`)
-     
-      
-      
-
    })()
 </script>
