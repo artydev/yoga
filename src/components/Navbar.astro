@@ -1,12 +1,15 @@
 ---
 import RdvsButton from "../widgets/RdvsButton.astro";
-import '@fontsource/tenor-sans';
+
 
 ---
-<header class="flex items-center bg-white   ">
-    <nav class="static h-12 flex w-full items-center md:h-[90px]">
-        <ul id="menu" data-status="hidden" class="duration-500 items-center bg-white  flex  relative w-full flex-col gap-2 justify-around mt-[-450px] md:mt-[0]  md:flex-row mx-auto md:w-[90%]">
-            <li >
+<header class="flex items-center bg-white justify-center  ">
+    <nav class="static h-12 flex justify-between w-full items-center md:h-[90px] shadow-md z-10">
+        <ul id="menu" data-status="hidden" class="duration-500 items-center bg-white  flex  relative w-full flex-col gap-2 justify-around mt-[-850px] md:mt-[0]  md:flex-row mx-auto md:w-[100%]">
+<li>
+    &nbsp;
+</li>
+            <li > 
                 <a data-name="accueil" href="/">ACCUEIL</a>
             </li>
             <li>
@@ -44,9 +47,11 @@ import '@fontsource/tenor-sans';
 <style>
     
     nav {
-        font-size: 14px;
+        font-size: 17px;
         height: 90px; 
-        font-family: Inter;
+        font-family: Tenor;
+      
+        
     }
 
     nav ul li:hover {
@@ -84,7 +89,7 @@ import '@fontsource/tenor-sans';
         let status = m.dataset.status;
         m.dataset.status = status == "hidden" ? "visible" : "hidden"
         if (m.dataset.status == "hidden") {
-            m.style.marginTop = "-450px"
+            m.style.marginTop = "-850px"
            icon && icon.setAttribute("name", "menu") 
         }
         else {

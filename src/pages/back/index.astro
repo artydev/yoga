@@ -1,19 +1,23 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Info from "../components/Info.astro";
+import Layout from "../../layouts/Layout.astro";
+import Info from "../../components/Info.astro";
+import Contactezmoi from "../../widgets/Contactezmoi.astro";
 ---
 
 <Layout>
    <div class="relative w-full flex flex-col justify-center">
-      <div class="flex flex-row justify-around gap-2">
-         <div class="bg-slate-50 w-full">
-            <img src="/assets/border.webp" alt="Astro">
+      <div class="flex flex-row justify-around gap-0">
+         <div class="bg-slate-50">
+            <img src="/assets/index/skyseeing.png" alt="Astro">
          </div>
-         <div class="bg-slate-50 w-full">
-            <img src="/assets/border.webp" alt="Astro">
+         <div class="bg-slate-50">
+            <img src="/assets/index/massage.png" alt="Astro">
          </div>
       </div>
-    
+      <div class="absolute w-[100vw] flex flex-row justify-center">
+         <Info></Info>
+      </div>
+     
    </div>
 </Layout>
 
