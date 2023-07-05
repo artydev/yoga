@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Info from "../components/Info.astro";
 import Card from "../components/Card.astro";
 import ButtonOrangeRed from "../widgets/ButtonOrangeRed.astro";
+import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro"
 ---
 
 <Layout>
@@ -35,11 +36,10 @@ import ButtonOrangeRed from "../widgets/ButtonOrangeRed.astro";
       </div>
    </section>
 
-   <section class="prosecenter">
-      <div class="mb-6" style="width:50%; border-right: 2px solid orange">
-         <img src="/assets/common/foliageorange.png" alt="" />
-      </div>
+   <section>
+      <RightOrangeFoliage></RightOrangeFoliage>
    </section>
+
    <section>
       <div class="text-2xl" style="text-align:center">LOREM IPSUM</div>
    </section>
@@ -90,20 +90,33 @@ import ButtonOrangeRed from "../widgets/ButtonOrangeRed.astro";
       class="ml-1 mr-1 mt-11 mb-11"
       style="display:flex; justify-content: space-around; gap:5px"
    >
-      <Card color="rgb(23,37,84)" url="/assets/index/hands.png">
-         <p class="pcard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis ullam mollitia dolor ipsam atque laborum distinctio totam nihil eos sint iure, vero porro voluptas voluptatibus accusantium. Enim amet ducimus sapiente.</p>
-         <ButtonOrangeRed>EN SAVOIR PLUS</ButtonOrangeRed>
-      </Card>
-      <Card color="orangered" url="/assets/index/handsfloue.png" >
-         <p class="pcard">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat illum, animi laudantium nihil harum optio eligendi porro. Enim placeat quos debitis, minima nesciunt recusandae sunt dolorum aliquid dolore nulla excepturi.</p>
-         <ButtonOrangeRed>EN SAVOIR PLUS</ButtonOrangeRed>
-      </Card>
-      <Card color="rgb(23,37,84)" url="/assets/index/head.png">
-         <p class="pcard">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores autem natus voluptas nulla deserunt magni excepturi ut corporis. Optio distinctio, accusamus cum ab sed minima ullam nemo pariatur similique maxime.</p>
-         <ButtonOrangeRed>EN SAVOIR PLUS</ButtonOrangeRed>
-      </Card>
+      <div>
+         <Card color="rgb(23,37,84)" url="/assets/index/hands.png">
+            <p class="pcard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis ullam mollitia dolor ipsam atque laborum distinctio totam nihil eos sint iure, vero porro voluptas voluptatibus accusantium. Enim amet ducimus sapiente.</p>
+            <ButtonOrangeRed>EN SAVOIR PLUS</ButtonOrangeRed>
+         </Card>
+      </div>
+
+      <div>
+         <Card color="orangered" url="/assets/index/handsfloue.png" >
+            <p class="pcard">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat illum, animi laudantium nihil harum optio eligendi porro. Enim placeat quos debitis, minima nesciunt recusandae sunt dolorum aliquid dolore nulla excepturi.</p>
+            <ButtonOrangeRed>EN SAVOIR PLUS</ButtonOrangeRed>
+         </Card>
+      </div>
+
+      <div>
+         <Card color="rgb(23,37,84)" url="/assets/index/head.png">
+            <p class="pcard">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores autem natus voluptas nulla deserunt magni excepturi ut corporis. Optio distinctio, accusamus cum ab sed minima ullam nemo pariatur similique maxime.</p>
+            <ButtonOrangeRed>EN SAVOIR PLUS</ButtonOrangeRed>
+         </Card>
+      </div>
+
+   
    </section>
    
+   <section>
+      <RightOrangeFoliage>
+   </section>
 </Layout>
 
 
