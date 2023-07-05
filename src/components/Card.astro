@@ -1,0 +1,23 @@
+---
+const { id, color, url } = Astro.props;
+const style = `border:20px solid ${color}`
+---
+
+<span id="props" 
+    data-color={color}
+    data-url={url}
+    data-id={id}
+> 
+</span>
+
+
+<div class="py-4 flex justify-center">
+    <div class="block p-6 max-w-sm">
+        <img src={url}  style={style}>
+        <p class="font-normal">
+          <slot />
+        </p>
+    </div>
+</div>
+
+
