@@ -3,7 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Info from "../components/Info.astro";
 import Card from "../components/Card.astro";
 import ButtonOrangeRed from "../widgets/ButtonOrangeRed.astro";
-import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro"
+import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
+import LeftBlueFoliage from "../widgets/LeftBlueFoliage.astro";
 ---
 
 <Layout>
@@ -37,12 +38,13 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro"
    </section>
 
    <section>
-      <RightOrangeFoliage></RightOrangeFoliage>
+      <RightOrangeFoliage />
    </section>
 
    <section>
       <div class="text-2xl" style="text-align:center">LOREM IPSUM</div>
    </section>
+
    <section class="flex justify-around mt-5">
       <div>
          <p>
@@ -69,18 +71,7 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro"
    </section>
 
    <!-- Blue Foliage -->
-   <section
-      style="display:flex; align-items:center; justify-content:space-between"
-   >
-      <div
-         class="mb-6 mt-6"
-         style="width:50%; border-right: 2px solid orange;height:209px"
-      >
-         &nbsp;
-      </div>
-
-      <img src="/assets/common/bluefoliage.png" alt="" />
-   </section>
+   <LeftBlueFoliage />
 
    <section>
       <div class="text-2xl" style="text-align:center">LOREM IPSUM</div>
@@ -92,34 +83,54 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro"
    >
       <div>
          <Card color="rgb(23,37,84)" url="/assets/index/hands.png">
-            <p class="pcard">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis ullam mollitia dolor ipsam atque laborum distinctio totam nihil eos sint iure, vero porro voluptas voluptatibus accusantium. Enim amet ducimus sapiente.</p>
+            <p class="pcard">
+               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+               Perferendis ullam mollitia dolor ipsam atque laborum distinctio
+               totam nihil eos sint iure, vero porro voluptas voluptatibus
+               accusantium. Enim amet ducimus sapiente.
+            </p>
             <ButtonOrangeRed>EN SAVOIR PLUS</ButtonOrangeRed>
          </Card>
       </div>
 
       <div>
-         <Card color="orangered" url="/assets/index/handsfloue.png" >
-            <p class="pcard">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat illum, animi laudantium nihil harum optio eligendi porro. Enim placeat quos debitis, minima nesciunt recusandae sunt dolorum aliquid dolore nulla excepturi.</p>
+         <Card color="orangered" url="/assets/index/handsfloue.png">
+            <p class="pcard">
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
+               illum, animi laudantium nihil harum optio eligendi porro. Enim
+               placeat quos debitis, minima nesciunt recusandae sunt dolorum
+               aliquid dolore nulla excepturi.
+            </p>
             <ButtonOrangeRed>EN SAVOIR PLUS</ButtonOrangeRed>
          </Card>
       </div>
 
       <div>
          <Card color="rgb(23,37,84)" url="/assets/index/head.png">
-            <p class="pcard">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores autem natus voluptas nulla deserunt magni excepturi ut corporis. Optio distinctio, accusamus cum ab sed minima ullam nemo pariatur similique maxime.</p>
+            <p class="pcard">
+               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores
+               autem natus voluptas nulla deserunt magni excepturi ut corporis.
+               Optio distinctio, accusamus cum ab sed minima ullam nemo pariatur
+               similique maxime.
+            </p>
             <ButtonOrangeRed>EN SAVOIR PLUS</ButtonOrangeRed>
          </Card>
       </div>
-
-   
    </section>
-   
+
    <section>
-      <RightOrangeFoliage>
+      <RightOrangeFoliage />
+   </section>
+
+   <section style="display:flex; justify-content:space-around">
+
+     <div>Vague Oraange</div>
+   </section>
+
+   <section>
+      <LeftBlueFoliage />
    </section>
 </Layout>
-
-
 
 <style>
    .hero {
@@ -164,13 +175,11 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro"
    }
 
    .pcard {
-      text-align:center;
+      text-align: center;
       margin-top: 15px;
-      
+
       font-weight: 300;
    }
-
-
 </style>
 
 <script>
