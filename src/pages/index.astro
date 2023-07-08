@@ -5,6 +5,9 @@ import Card from "../components/Card.astro";
 import ButtonOrangeRed from "../widgets/ButtonOrangeRed.astro";
 import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
 import LeftBlueFoliage from "../widgets/LeftBlueFoliage.astro";
+import CandleVagueOrange from "../widgets/CandleVagueOrange.astro";
+import SectionCertificats from "../components/SectionCertificats.astro";
+import ImagesCertificats from "../components/ImagesCertificats.astro"
 ---
 
 <Layout>
@@ -37,9 +40,9 @@ import LeftBlueFoliage from "../widgets/LeftBlueFoliage.astro";
       </div>
    </section>
 
-   <section>
+  
       <RightOrangeFoliage />
-   </section>
+ 
 
    <section>
       <div class="text-2xl" style="text-align:center">LOREM IPSUM</div>
@@ -78,7 +81,7 @@ import LeftBlueFoliage from "../widgets/LeftBlueFoliage.astro";
    </section>
 
    <section
-      class="ml-1 mr-1 mt-11 mb-11"
+      class="ml-1 mr-1"
       style="display:flex; justify-content: space-around; gap:5px"
    >
       <div>
@@ -118,18 +121,55 @@ import LeftBlueFoliage from "../widgets/LeftBlueFoliage.astro";
       </div>
    </section>
 
-   <section>
+   <div class="mb-11">
       <RightOrangeFoliage />
-   </section>
+   </div>
+   
+   
+   <div style="display:flex; justify-content:space-around; align-items:center;position:relative;top:-70px">
+      <div style="width:50%;background;margin-left:100px;position:relative;top:-20px">
+         <p class=" text-2xl mt-20 mb-2">LOREM IPSUM!!</p>
+         <p class="mb-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe consectetur expedita odio debitis alias sapiente voluptas accusamus quo quis! Eaque optio vero magni quas alias quidem, odio nihil officiis sapiente.
+         </p>
+         <p class="mb-5">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore accusamus quae error libero nostrum! Veritatis aspernatur molestias incidunt nihil distinctio saepe quidem, tenetur quia facilis illo recusandae ullam doloremque! Illo.
+         </p>
+         <p class="mb-5">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero omnis, vitae suscipit fugiat labore commodi aliquid officia dicta error, quos veniam, facere voluptatibus provident quasi amet optio corrupti ipsam tempora?
+         </p>
+         <p class="mb-5">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero omnis, vitae suscipit fugiat labore commodi aliquid officia dicta error, quos veniam, facere voluptatibus provident quasi amet optio corrupti ipsam tempora?
+         </p>
+         <p class="mb-5">
+            
+         </p>
+         <div style="display:flex;" class=" mt-4">
+            <div>
+               <ButtonOrangeRed>
+                  PRENDRE RDV
+               </ButtonOrangeRed>
+            </div>
 
-   <section style="display:flex; justify-content:space-around">
+         </div>
+      </div>
+      <div style="margin-left:auto">
+         <CandleVagueOrange />
+      </div>
+   </div>
 
-     <div>Vague Oraange</div>
+   <div>
+      <LeftBlueFoliage />
+   </div>
+
+   <section>
+      <SectionCertificats />
    </section>
 
    <section>
-      <LeftBlueFoliage />
+      <ImagesCertificats />
    </section>
+
 </Layout>
 
 <style>
