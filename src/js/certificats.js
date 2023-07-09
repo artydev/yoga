@@ -10,6 +10,9 @@ const styleView = style({
   justifyContent: "space-around",
   alignItems: "center",
   gap: "10px",
+
+  position: "relative",
+  top: "0px"
 });
 
 const styleViewSummary = style ({
@@ -27,6 +30,8 @@ const styleBlocImage = style({
   backgroundSize: "100%",
   backgroundPositionY: "100px",
   width: "50%",
+  maxWidth: "600px",
+  margin: "0 auto"
 });
 
 const styleImage = style({

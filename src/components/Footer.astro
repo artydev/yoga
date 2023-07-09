@@ -1,12 +1,96 @@
-<footer>
-    <h1>Footer!!!</h1>
- </footer>
+---
+import RdvsButtonFooter from "../widgets/RdvsButtonFooter.astro";
+import Social from "../components/Social.astro";
+---
 
- <style>
-	footer {
-		background: lightblue;
-	
-		width: 100vw;
-		height: 300px;
-	}
+<div class="footer">
+  <div class="wrapcontent">
+    <div class="content">
+      <div class="wraplist">
+        <div class="left">
+          <h1>ACCUEIL</h1>
+          <h1>A PROPOS</h1>
+          <h1>SÉANCES</h1>
+          <h1>TÉMOIGNAGES</h1>
+          <h1>TARIFS</h1>
+          <h1>HEY HO LETS GO</h1>
+          <h1>CONTACT</h1>
+        </div>
+      </div>
+      <div class="wrapcenter">
+        <div class="center">
+          <div onclick="alert('test')">
+            <RdvsButtonFooter />
+          </div>
+        </div>
+      </div>
+      <Social />
+    </div>
+  </div>
+</div>
+
+<style>
+  .footer {
+    background-image: url("/assets/common/bluewave.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    display: block;
+
+    background-position: bottom;
+    color: white;
+    position: relative;
+  }
+
+  .wrapcontent {
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .content {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+  }
+
+  .wraplist {
+    width: calc(100vw / 3);
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .left {
+    line-height: 2.5rem;
+    position: relative;
+    bottom: 1rem;
+    font-size: 1.2rem;
+    font-family: Tenor;
+  }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .wrapcenter {
+    width: calc(100vw / 3);
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @media (max-width: 960px) {
+    .footer {
+      background-size: contain;
+      background-position: bottom;
+    }
+  }
+
+  @media (min-width: 961px) {
+    .footer {
+      background-position-y: 10px;
+    }
+  }
 </style>
+
+

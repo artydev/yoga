@@ -10,6 +10,8 @@ const cert1 = img({ src: "/assets/index/cert1.png" });
 const cert2 = img({ src: "/assets/index/cert2.png" });
 const cert3 = img({ src: "/assets/index/cert3.png" });
 
+cert1.style = "position:relative; top: -70px"
+
 const styleView = style({
   display: "flex",
   alignItems: "center",

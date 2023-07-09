@@ -1,0 +1,10 @@
+body {
+    min-height:100%;
+}
+
+@media(max-width:960px) {
+    .footer {
+      display: none;
+      
+    }
+  }
