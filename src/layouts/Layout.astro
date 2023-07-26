@@ -2,7 +2,7 @@
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
-
+import RotateDevice from "../components/RotateDevice.astro";
 
 ---
 
@@ -14,6 +14,8 @@ import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 		 <link rel="stylesheet" href="/globalstyle.css">
 		 <GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap">
 		 </GoogleFontsOptimizer>
+		 <GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Allura&display=swap">
+		 </GoogleFontsOptimizer>
 		<script type="module" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.1.2/ionicons/ionicons.esm.js"></script>
  
 		<title>My site</title>
@@ -24,6 +26,7 @@ import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 		<slot />
 
 		<Footer />
+		<RotateDevice />
 	</body>
 </html>
 

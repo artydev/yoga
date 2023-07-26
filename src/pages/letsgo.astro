@@ -1,8 +1,38 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import HeroMassage from "../components/HeroMassage.astro";
 ---
 
 <Layout>
-   <hr />
-   <h1>LET'S GO</h1>
+   <div class="container mt-16">
+      <HeroMassage titre="LETS'GO"></HeroMassage>
+   </div>
 </Layout>
+
+<script>
+   (function styleLink() {
+     let link = document.querySelector("[data-name='letsgo']") as HTMLElement;
+     link.setAttribute(
+       "style",
+       `
+         text-decoration: orangered;
+         cursor: pointer;
+         color:black;
+         text-decoration-line: underline;
+         text-underline-offset: 5px;
+         text-decoration-thickness: 0.2rem; 
+         user-select: none;`
+     );
+   })();
+ 
+   (function () {
+     const image = document.getElementById("imgwitness");
+     const foliage = image?.querySelector("img");
+     if (foliage) {
+       foliage.style.display = "block";
+       foliage.style.position = "relative";
+       foliage.style.top = "100px";
+     }
+   })();
+ </script>
+ 

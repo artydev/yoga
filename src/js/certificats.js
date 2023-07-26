@@ -1,5 +1,6 @@
 import van from "./van.js";
 import { style } from "typestyle";
+import { HandWritenMessage } from "./tools.js";
 
 const { div, h1, img, p, pre, br } = van.tags;
 
@@ -31,7 +32,7 @@ const styleBlocImage = style({
   backgroundPositionY: "100px",
   width: "50%",
   maxWidth: "600px",
-  margin: "0 auto"
+  margin: "0 auto",
 });
 
 const styleImage = style({
@@ -41,6 +42,7 @@ const styleImage = style({
 
 const styleTitle = style({
   fontSize: "24px",
+  letterSpacing: "0.2rem"
 });
 
 const stylePre = style({
@@ -54,6 +56,17 @@ const styleLogoImage = style({
   marginTop: "32px",
 });
 
+const styleHandWrite = style({
+  position:"relative", 
+  left: "100px",
+  color: "#F05907",
+  fontFamily: 'Allura, cursive',
+  fontWeight: "bold",
+  fontSize:"28px",
+  position: "relative",
+  bottom: "10px"
+})
+
 function YogaImage() {
   return div(
     img({
@@ -63,8 +76,13 @@ function YogaImage() {
   );
 }
 
+
+
 function SummaryTitle() {
-  return h1({ class: styleTitle }, "CERTIFICATS");
+  return div (
+    h1({ class: styleTitle }, "CERTIFICATS"),
+    HandWritenMessage("Francoise Lefeuvre")
+  );
 }
 
 function SummaryContent() {

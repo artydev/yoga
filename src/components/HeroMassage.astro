@@ -1,0 +1,45 @@
+---
+const { titre } = Astro.props;
+---
+
+<div class="hero" data-titre={titre}>
+
+</div>
+
+
+<style>
+ 
+
+    .hero {
+        display:flex;
+        --main-bg-color: white;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        background-color: red;
+        background-image: url("/assets/common/heromassage.png") ;
+        background-size: cover;
+        height: 400px;
+        background-color: grey;
+        background-blend-mode: multiply;
+    }
+</style>
+
+
+<style>
+
+
+    .hero::after {
+        content: attr(data-titre);;
+        color: white;
+        font-size: 48px;;
+        filter: brightness(100%);
+    }
+</style>
+
+
+<script>
+    const hero = document.querySelector(".hero") as HTMLElement
+    const titre = hero?.dataset?.titre
+    hero
+</script>

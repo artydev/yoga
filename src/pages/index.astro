@@ -9,23 +9,31 @@ import CandleVagueOrange from "../widgets/CandleVagueOrange.astro";
 import SectionCertificats from "../components/SectionCertificats.astro";
 import ImagesCertificats from "../components/ImagesCertificats.astro";
 import Temoignages from "../components/Temoignages.astro";
+import HandWritenMessage from "../widgets/HandWritenMessage.astro";
 
 const darblue = "#001A5C";
 ---
 
 <Layout>
   <section class="hero">
+  
     <div style="width:50%">
-      <img src="/assets/index/skyseeing.png" alt="dame levant les yeux" />
+      <img src="/assets/index/skyseeing.webp" alt="dame levant les yeux" />
     </div>
+  
+    <div style="position:absolute;max-width:1280px">
+      <Info></Info>
+     </div>
 
     <div style="width:50%">
-      <img src="/assets/index/massage.png" alt="dame levant les yeux" />
+      <img src="/assets/index/massage.webp"  style="position:relative;top:-8px;z-index:-2" />
     </div>
   </section>
+
+
   <section class="bienvenue">
     <div class="backimg" style="width:50%">
-      <img src="/assets/index/francoisejean.png" alt="dame levant les yeux" />
+      <img src="/assets/index/francoisejean.png" alt="dame massant une personne" />
     </div>
     <div style="width:50%">
       <div>
@@ -73,6 +81,9 @@ const darblue = "#001A5C";
 
   <!-- Blue Foliage -->
   <LeftBlueFoliage />
+
+
+ 
 
   <section>
     <div class="text-2xl" style="text-align:center">LOREM IPSUM</div>
@@ -192,13 +203,16 @@ const darblue = "#001A5C";
   .hero {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     gap: 5px;
+    position: relative;
+    top:50px;
   }
 
   .hero > div {
     display: flex;
     justify-content: space-around;
-    margin-top: 55px;
+   
   }
 
   .hero img {
@@ -240,6 +254,8 @@ const darblue = "#001A5C";
   .lastfoliage {
     display: none;
   }
+
+
 </style>
 
 <script>

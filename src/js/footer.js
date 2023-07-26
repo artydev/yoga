@@ -1,19 +1,9 @@
 import van from "./van.js";
 import { style } from "typestyle";
 
-const { div, h1, img, p, pre, br } = van.tags;
+const { div} = van.tags;
 
 const target = document.querySelector(".footer");
-
-const _styleView = style({
-    backgroundImage: "url('/assets/index/waveblue.png')",
-    backgroundSize: "100vw",
-    backgroundPositionY:  "calc(0vh)",
-    background:  'red',
-    bottom: 0,
-    backgroundRepeat: "no-repeat",
-    height: "300px",
-});
 
 
 const styleView = style ({

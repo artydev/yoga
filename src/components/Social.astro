@@ -1,11 +1,11 @@
 <div class="wrapright">
   <div class="right">
-    <div style="display:flex;justify-content: flex-end;gap:200px">
-      <div style="display:flex; gap:20px">
-        <div>
+    <div style="display:flex;justify-content: flex-end;gap:150px">
+      <div class="buttons">
+        <div class="button">
             <img src="/assets/index/facebook.png" />
         </div>
-        <div>
+        <div class="button">
             <img src="/assets/index/instagram.png" />
         </div>
       </div>
@@ -34,4 +34,16 @@
     width: 100%;
    
   }
+
+  .button {
+    min-width: 60px;
+  }
+
+  .buttons {
+    display:flex; gap:10px;
+    position: absolute;
+    bottom: 20px;
+    right:150px;
+  }
 </style>
+

@@ -8,7 +8,7 @@ const target = document.querySelector(".certificats");
 const cert0 = img({ src: "/assets/index/cert0.png" });
 const cert1 = img({ src: "/assets/index/cert1.png" });
 const cert2 = img({ src: "/assets/index/cert2.png" });
-const cert3 = img({ src: "/assets/index/cert3.png" });
+const cert3 = img({ src: "/assets/index/cert3.webp" });
 
 cert1.style = "position:relative; top: -70px"
 
