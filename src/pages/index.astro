@@ -9,164 +9,119 @@ import CandleVagueOrange from "../widgets/CandleVagueOrange.astro";
 import SectionCertificats from "../components/SectionCertificats.astro";
 import ImagesCertificats from "../components/ImagesCertificats.astro";
 import Temoignages from "../components/Temoignages.astro";
-import HandWritenMessage from "../widgets/HandWritenMessage.astro";
 
 const darblue = "#001A5C";
 ---
 
 <Layout>
   <section class="hero">
-  
     <div style="width:50%">
       <img src="/assets/index/skyseeing.webp" alt="dame levant les yeux" />
     </div>
-  
+
     <div style="position:absolute;max-width:1280px">
-      <Info></Info>
-     </div>
+      <Info />
+    </div>
 
     <div style="width:50%">
-      <img src="/assets/index/massage.webp"  style="position:relative;top:-8px;z-index:-2" />
+      <img
+        src="/assets/index/massage.webp"
+        style="position:relative;top:-8px;z-index:-2"
+      />
     </div>
   </section>
 
-
   <section class="bienvenue">
     <div class="backimg" style="width:50%">
-      <img src="/assets/index/francoisejean.png" alt="dame massant une personne" />
+      <img
+        src="/assets/index/francoisejean.png"
+        alt="dame massant une personne"
+      />
     </div>
     <div style="width:50%">
-      <div>
-        <h1>Bienvenue</h1>
+      <div class="comment">
+        <div>
+          <div class="head">BIENVENUS</div>
+          <div class="handwritten">Françoise Lefeuvre</div>
+        </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
-          architecto ut consectetur, nesciunt nulla aliquam assumenda! Provident
-          quibusdam corrupti dolore similique ex error maxime sunt, harum
-          laudantium nulla non dolor.
+          Chaque séance est unique. Je suis à votre écoute et m’adapte à votre
+          demande. Je mets mes outils à votre service pour vous aider à
+          retrouver une relation harmonieuse avec vous-même.
         </p>
+        <p>Certains changements prennent plus de temps que d’autres.</p>
+
+        <p>Et parfois, dès la deuxième séance, la magie opère !</p>
+        <p>
+          D'une manière générale, que ça soit en hypnose ou en soin énergétique,
+          je vous encourage à faire au minimum 3 séances pour vous rendre compte
+          de l’évolution.
+        </p>
+        <p>
+          Je vous accueille au sein d’un cabinet paramédical dans le 20ème à
+          Paris.
+        </p>
+        <div
+          style="font-weight:bold; font-size:1.3rem; text-align:right;margin-right:2rem;"
+        >
+          <div>
+            “Je ne suis pas ce qui m’est arrivé.Je suis ce que j’ai décidé
+            d’être.”
+          </div>
+          <div>C.G. JUNG</div>
+        </div>
       </div>
     </div>
   </section>
 
   <RightOrangeFoliage />
 
-  <section>
-    <div class="text-2xl" style="text-align:center">LOREM IPSUM</div>
-  </section>
-
-  <section class="flex justify-around mt-5">
-    <div>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit.Ducimus
-        explicabo fuga dolorum, officiis ad at obcaecati cum eos saepe <br
-        />temporibus blanditiis, provident autem dolore ratione unde ipsa
-        doloribus nam nulla!
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit.Ducimus
-        explicabo fuga dolorum, officiis ad at obcaecati cum eos saepe <br
-        />temporibus blanditiis, provident autem dolore ratione unde ipsa
-        doloribus nam nulla!
-      </p>
-      <br />
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit.Ducimus
-        explicabo fuga dolorum, officiis ad at obcaecati cum eos saepe <br
-        />temporibus blanditiis, provident autem dolore ratione unde ipsa
-        doloribus nam nulla!
-      </p>
-    </div>
-  </section>
-
-  <!-- Blue Foliage -->
-  <LeftBlueFoliage />
-
-
- 
-
-  <section>
-    <div class="text-2xl" style="text-align:center">LOREM IPSUM</div>
-  </section>
-
-  <!--  Three Cards -->
+  <!--  Two Cards -->
   <section
     class="ml-1 mr-1"
-    style="display:flex; justify-content: space-around; gap:5px"
+    style="display:flex; justify-content: space-around; gap:5px;margin-bottom:8rem;"
   >
     <div>
-      <Card color="#001A5C" url="/assets/index/hands.png">
-        <p class="pcard">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis
-          ullam mollitia dolor ipsam atque laborum distinctio totam nihil eos
-          sint iure, vero porro voluptas voluptatibus accusantium. Enim amet
-          ducimus sapiente.
-        </p>
-        <ButtonOrangeRed>EN SAVOIR PLUS</ButtonOrangeRed>
-      </Card>
+      <div class="headcard">Séance d'hypnose</div>
+      <Card color="#001A5C" url="/assets/index/hands.png" />
     </div>
 
     <div>
-      <Card color="#F05907" url="/assets/index/handsfloue.png">
-        <p class="pcard">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
-          illum, animi laudantium nihil harum optio eligendi porro. Enim placeat
-          quos debitis, minima nesciunt recusandae sunt dolorum aliquid dolore
-          nulla excepturi.
-        </p>
-        <ButtonOrangeRed>EN SAVOIR PLUS</ButtonOrangeRed>
-      </Card>
-    </div>
-
-    <div>
-      <Card color="#001A5C" url="/assets/index/head.png">
-        <p class="pcard">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores
-          autem natus voluptas nulla deserunt magni excepturi ut corporis. Optio
-          distinctio, accusamus cum ab sed minima ullam nemo pariatur similique
-          maxime.
-        </p>
-        <ButtonOrangeRed>EN SAVOIR PLUS</ButtonOrangeRed>
-      </Card>
+      <div class="headcard">Soin énergétique</div>
+      <Card color="#F05907" url="/assets/index/head.png" />
     </div>
   </section>
 
-  <div class="mb-11">
-    <RightOrangeFoliage />
+  <div style="position:relative;top:-5rem;">
+    <LeftBlueFoliage/>
   </div>
 
   <div
-    style="display:flex; justify-content:space-around; align-items:center;position:relative;top:-70px"
+    style="display:flex; justify-content:space-around; align-items:center;position:relative;top:-150px"
   >
     <div
-      style="width:50%;background;margin-left:100px;position:relative;top:-20px"
+      style="width:50%;background;margin-left:100px;position:relative;top:5rem"
     >
-      <p class="text-2xl mt-20 mb-2">LOREM IPSUM!!</p>
-      <p class="mb-5">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-        consectetur expedita odio debitis alias sapiente voluptas accusamus quo
-        quis! Eaque optio vero magni quas alias quidem, odio nihil officiis
-        sapiente.
-      </p>
-      <p class="mb-5">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-        accusamus quae error libero nostrum! Veritatis aspernatur molestias
-        incidunt nihil distinctio saepe quidem, tenetur quia facilis illo
-        recusandae ullam doloremque! Illo.
-      </p>
-      <p class="mb-5">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero omnis,
-        vitae suscipit fugiat labore commodi aliquid officia dicta error, quos
-        veniam, facere voluptatibus provident quasi amet optio corrupti ipsam
-        tempora?
-      </p>
-      <p class="mb-5">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero omnis,
-        vitae suscipit fugiat labore commodi aliquid officia dicta error, quos
-        veniam, facere voluptatibus provident quasi amet optio corrupti ipsam
-        tempora?
-      </p>
-      <p class="mb-5"></p>
+      <div class="comment">
+        <div class="head">POURQUOI PRENDRE RENDEZ-VOUS ?</div>
+        <p>
+          Avez-vous remarqué que malgré notre désir de changement, notre volonté
+          ne suffit pas à nous faire changer durablement ?
+        </p>
+        <p>
+          L’hypnose Ericksonienne (du nom du psychiatre Milton H. Erickson) est une thérapie brève orientée vers la solution. Au bout de quelques séances la personne va se libérer d'un fonctionnement qu'elle n'arrivait pas à modifier de manière consciente, même avec la plus grande des volontés.
+        </p>
+        <p>
+          Chaque séance est unique. Je m’adapte à votre demande. Certains changements prennent plus de temps que d’autres. Et parfois, dès la deuxième séance la magie opère ! Mais d'une manière générale, que ça soit en hypnose ou en soin énergétique, je vous invite à faire au minimum 3 à 5 séances pour vous rendre compte de l’évolution. 
+        </p>
+        <p>
+          Je vous accueille au sein d’un cabinet paramédical dans le 20ème à Paris.
+        </p>
+        <p style="margin-top:1rem">
+          <span style="font-weight:bold; text-decoration:underline">Motif de RDV</span> :  L'hypnose thérapeutique vous aide à surmonter de nombreuses problématiques telles que l'anxiété, l'angoisse, les phobies, la dépression, les troubles de la concentration, les compulsions, mais aussi la confiance et l'estime de soi, la difficulté de parler en public, la gestion des émotions. Dans tous les cas, je vous invite à me contacter avant la prise de rendez-vous pour déterminer vos besoins et optimiser votre séance. 
+        </p>
+      </div>
+
       <div style="display:flex;" class="mt-4">
         <div>
           <ButtonOrangeRed>PRENDRE RDV</ButtonOrangeRed>
@@ -178,23 +133,21 @@ const darblue = "#001A5C";
     </div>
   </div>
 
-  <section style="position:relative;top:-120px">
-    <LeftBlueFoliage />
+  <section style="position:relative;top:-2rem">
+    <LeftBlueFoliage  />
   </section>
 
-  <section style="position:relative;top:-120px">
+  <section style="position:relative;top:0rem;margin-right:2rem;">
     <SectionCertificats />
   </section>
 
-  <section style="position:relative;top:-190px">
+  <section style="position:relative;top:-2rem">
     <ImagesCertificats />
   </section>
 
-  <section id="imgwitness" style="position:relative;top:-300px">
-    <RightOrangeFoliage />
-  </section>
 
-  <section style="position:relative;top:-200px">
+
+  <section style="position:relative;top:-5rem">
     <Temoignages />
   </section>
 </Layout>
@@ -206,13 +159,13 @@ const darblue = "#001A5C";
     align-items: center;
     gap: 5px;
     position: relative;
-    top:50px;
+    top: 50px;
+    margin-bottom: 6rem;
   }
 
   .hero > div {
     display: flex;
     justify-content: space-around;
-   
   }
 
   .hero img {
@@ -255,7 +208,44 @@ const darblue = "#001A5C";
     display: none;
   }
 
+  .head {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: 24px;
+    letter-spacing: 0.2rem;
+  }
 
+  .comment {
+    font-size: 1.3rem;
+    font-family: Tenor;
+    font-style: italic;
+    background: white;
+    color: #2c2c5f;
+    margin-right: 2rem;
+  }
+
+  .comment > p {
+    margin-bottom: 0.5rem;
+  }
+
+  .headcard {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: Tenor;
+    color: #2c2c5f;
+  }
+
+  .handwritten {
+    color: #F05907;
+    font-family: Allura, cursive;
+    font-size:1.8rem;
+    position: relative;
+    top:-2.rem;
+    left: 6rem;
+  }
 </style>
 
 <script>
@@ -284,4 +274,3 @@ const darblue = "#001A5C";
     }
   })();
 </script>
-

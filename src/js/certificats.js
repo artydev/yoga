@@ -11,7 +11,6 @@ const styleView = style({
   justifyContent: "space-around",
   alignItems: "center",
   gap: "10px",
-
   position: "relative",
   top: "0px"
 });
@@ -46,8 +45,12 @@ const styleTitle = style({
 });
 
 const stylePre = style({
-  fontFamily: "Segoe UI",
-  whiteSpace: "pre-wrap",
+  fontSize: "1.3rem",
+  fontFamily: "Tenor",
+  fontStyle: "italic",
+  background: "white",
+  color: "#2c2c5f",
+  marginRight:"2rem"
 });
 
 const styleLogoImage = style({
@@ -75,7 +78,6 @@ function YogaImage() {
     })
   );
 }
-
 
 
 function SummaryTitle() {
