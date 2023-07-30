@@ -22,11 +22,13 @@ import RotateDevice from "../components/RotateDevice.astro";
 
 	</head>
 	<body>
-		<Navbar></Navbar>
-		<slot />
+		<div>
+			<Navbar></Navbar>
+			<slot />
+			<Footer />
+			<RotateDevice />
+		</div>
 
-		<Footer />
-		<RotateDevice />
 	</body>
 </html>
 

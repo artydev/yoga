@@ -8,8 +8,6 @@ const { titre } = Astro.props;
 
 
 <style>
- 
-
     .hero {
         display:flex;
         --main-bg-color: white;
@@ -17,29 +15,24 @@ const { titre } = Astro.props;
         align-items: center;
         width: 100vw;
         background-color: red;
-        background-image: url("/assets/common/heromassage.png") ;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.30)),url("/assets/index/femmetasse.png") ;
         background-size: cover;
+        background-position: center center ;
         height: 400px;
-        background-color: grey;
-        background-blend-mode: multiply;
+    
     }
 </style>
 
-
 <style>
-
-
     .hero::after {
         content: attr(data-titre);;
         color: white;
-        font-size: 48px;;
+        font-size: 48px;
         filter: brightness(100%);
+        font-family: Tenor;
+        text-shadow: 5px 5px 3px rgba(0,0,0,0.3);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 </style>
 
-
-<script>
-    const hero = document.querySelector(".hero") as HTMLElement
-    const titre = hero?.dataset?.titre
-    hero
-</script>
