@@ -16,18 +16,15 @@ const darblue = "#001A5C";
 <Layout>
   <section class="hero">
     <div style="width:50%">
-      <img src="/assets/index/skyseeing.webp" alt="dame levant les yeux" />
+      <img src="/assets/index/skyseeing.webp" alt="dame levant les yeux" style='opacity:0'/>
     </div>
 
-    <div style="position:absolute;max-width:1280px">
+    <div style="position:absolute;max-width:1280px;z-index:3;">
       <Info />
     </div>
 
     <div style="width:50%">
-      <img
-        src="/assets/index/massage.webp"
-        style="position:relative;top:-8px;z-index:-2"
-      />
+      <img src="/assets/index/skyseeing.webp" alt="dame levant les yeux"  style='opacity:0'/>
     </div>
   </section>
 
@@ -147,7 +144,7 @@ const darblue = "#001A5C";
 
 
 
-  <section style="position:relative;top:-5rem">
+  <section style="position:relative;top:-2rem">
     <Temoignages />
   </section>
 </Layout>
@@ -168,10 +165,24 @@ const darblue = "#001A5C";
     justify-content: space-around;
   }
 
-  .hero img {
-    width: 100%;
-    object-fit: fill;
+
+  .hero div:first-child {
+    background:red;
+    background-image: url("/assets/index/assisetasse.png");
+    background-position: center center ;
   }
+
+  .hero div:nth-child(3) {
+    background:orange;
+    z-index:2;
+    background-image: url("/assets/index/heropot.png");
+    background-repeat:no-repeat;
+    background-position: center center; ;
+    background-size:cover;
+    
+  
+  }
+
 
   .bienvenue {
     display: flex;

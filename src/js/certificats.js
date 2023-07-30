@@ -36,7 +36,10 @@ const styleBlocImage = style({
 
 const styleImage = style({
   width: "100%",
-  transform: "scale(0.7)",
+   borderRadius: "50%",
+   transform: "scale(0.65)",
+  position: "relative",
+  top: "-3rem"
 });
 
 const styleTitle = style({
@@ -132,7 +135,7 @@ function View() {
 
     div(
       { class: styleBlocImage },
-      img({ src: "/assets/index/circlecertif.png", class: styleImage })
+      img({ src: "/assets/index/portraitcircle.png", class: styleImage })
     ),
     div({ class: styleViewSummary }, 
         div(Summary())
