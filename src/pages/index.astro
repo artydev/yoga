@@ -8,152 +8,219 @@ import LeftBlueFoliage from "../widgets/LeftBlueFoliage.astro";
 import CandleVagueOrange from "../widgets/CandleVagueOrange.astro";
 import SectionCertificats from "../components/SectionCertificats.astro";
 import ImagesCertificats from "../components/ImagesCertificats.astro";
-import Temoignages from "../components/Temoignages.astro";
+import TemoignagesComponent from "../components/TemoignageAccueil.astro";
+import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
 
 const darblue = "#001A5C";
 ---
 
 <Layout>
   <div style="max-width:100vw;margin:0 auto;">
+    <section class="hero">
+      <div style="width:50%">
+        <img
+          src="/assets/index/skyseeing.webp"
+          alt="dame levant les yeux"
+          style="opacity:0"
+        />
+        <!-- placeholder -->
+      </div>
 
+      <div style="position:absolute;max-width:1280px;z-index:3;">
+        <Info />
+      </div>
 
-  <section class="hero">
-    <div style="width:50%">
-      <img src="/assets/index/skyseeing.webp" alt="dame levant les yeux" style='opacity:0'/> <!-- placeholder -->
-    </div>
+      <div style="width:50%">
+        <img
+          src="/assets/index/skyseeing.webp"
+          alt="dame levant les yeux"
+          style="opacity:0"
+        />
+        <!-- placeholder -->
+      </div>
+    </section>
 
-    <div style="position:absolute;max-width:1280px;z-index:3;">
-      <Info />
-    </div>
-
-    <div style="width:50%">
-      <img src="/assets/index/skyseeing.webp" alt="dame levant les yeux"  style='opacity:0'/> <!-- placeholder -->
-    </div>
-  </section>
-
-  <section class="bienvenue">
-    <div class="backimg" style="width:50%">
-      <img
-        src="/assets/index/francoisejean.png"
-        alt="dame massant une personne"
-      />
-    </div>
-    <div style="width:50%">
-      <div class="comment">
-        <div>
-          <div class="head">BIENVENU</div>
-          <div class="handwritten">Françoise Lefeuvre</div>
-        </div>
-        <p>
-          Chaque séance est unique. Je suis à votre écoute et m’adapte à votre
-          demande. Je mets mes outils à votre service pour vous aider à
-          retrouver une relation harmonieuse avec vous-même.
-        </p>
-        <p>Certains changements prennent plus de temps que d’autres.</p>
-
-        <p>Et parfois, dès la deuxième séance, la magie opère !</p>
-        <p>
-          D'une manière générale, que ça soit en hypnose ou en soin énergétique,
-          je vous encourage à faire au minimum 3 séances pour vous rendre compte
-          de l’évolution.
-        </p>
-        <p>
-          Je vous accueille au sein d’un cabinet paramédical dans le 20ème à
-          Paris.
-        </p>
-        <div
-          style="font-weight:bold; font-size:1.3rem; text-align:right;margin-right:2rem;"
-        >
-          <div>
-            “Je ne suis pas ce qui m’est arrivé.Je suis ce que j’ai décidé
-            d’être.”
-          </div>
-          <div>C.G. JUNG</div>
+    <section class="first-content">
+      <div style="flex:1;">
+        <div style="display:flex;justify-content:space-around">
+          <img src="/assets/index/francoisejeanblob.png" />
         </div>
       </div>
-    </div>
-  </section>
 
-  <RightOrangeFoliage />
+      <div style="flex:1">
+        <div class="comment">
+          <div class="head" style="margin-top:0">BIENVENUS</div>
+          <p>
+            Chaque séance est unique. Je suis à votre écoute et m’adapte à votre
+            demande. Je mets mes outils à votre service pour vous aider à
+            retrouver une relation harmonieuse avec vous-même.
+          </p>
+          <p>
+            Certains changements prennent plus de temps que d’autres. Et
+            parfois, dès la deuxième séance la magie opère !
+          </p>
+          <p>
+            D'une manière générale, que ça soit en hypnose ou en soin
+            énergétique, je vous encourage à faire au minimum 3 séances pour
+            vous rendre compte de l’évolution. Je vous accueille au sein d’un
+            cabinet paramédical dans le 20ème à Paris.
+          </p>
+          <p style="font-weight:bold">
+            “Je ne suis pas ce qui m’est arrivé. Je suis ce que j’ai décidé
+            d’être.” C.G. JUNG
+          </p>
+        </div>
+        <div style="width:150px;margin-top:6rem;">
+          <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
+        </div>
+      </div>
+    </section>
 
-  <!--  Two Cards -->
-  <section
-    class="ml-1 mr-1"
-    style="display:flex; justify-content: space-around; gap:5px;margin-bottom:8rem;"
-  >
-    <div>
-      <div class="headcard">Séance d'hypnose</div>
-      <Card color="#001A5C" url="/assets/index/hands.png" />
-    </div>
+    <RightOrangeFoliage />
 
-    <div>
-      <div class="headcard">Soin énergétique</div>
-      <Card color="#F05907" url="/assets/index/head.png" />
-    </div>
-  </section>
-
-  <div style="position:relative;top:-3rem;">
-    <LeftBlueFoliage/>
-  </div>
-
-  <div
-    style="display:flex; justify-content:space-around; align-items:center;position:relative;top:-150px"
-  >
-    <div
-      style="width:50%;background;margin-left:100px;position:relative;top:3rem"
+    <!--  Two Cards -->
+    <section
+      class="ml-1 mr-1"
+      style="display:flex; justify-content: space-around; gap:5px;margin-bottom:8rem;"
     >
-      <div class="comment">
-        <div class="head">POURQUOI PRENDRE RENDEZ-VOUS ?</div>
-        <p>
-          Avez-vous remarqué que malgré notre désir de changement, notre volonté
-          ne suffit pas à nous faire changer durablement ?
-        </p>
-        <p>
-          L’hypnose Ericksonienne (du nom du psychiatre Milton H. Erickson) est une thérapie brève orientée vers la solution. Au bout de quelques séances la personne va se libérer d'un fonctionnement qu'elle n'arrivait pas à modifier de manière consciente, même avec la plus grande des volontés.
-        </p>
-        <p>
-          Chaque séance est unique. Je m’adapte à votre demande. Certains changements prennent plus de temps que d’autres. Et parfois, dès la deuxième séance la magie opère ! Mais d'une manière générale, que ça soit en hypnose ou en soin énergétique, je vous invite à faire au minimum 3 à 5 séances pour vous rendre compte de l’évolution. 
-        </p>
-        <p>
-          Je vous accueille au sein d’un cabinet paramédical dans le 20ème à Paris.
-        </p>
-        <p style="margin-top:1rem">
-          <span style="font-weight:bold; text-decoration:underline">Motif de RDV</span> :  L'hypnose thérapeutique vous aide à surmonter de nombreuses problématiques telles que l'anxiété, l'angoisse, les phobies, la dépression, les troubles de la concentration, les compulsions, mais aussi la confiance et l'estime de soi, la difficulté de parler en public, la gestion des émotions. Dans tous les cas, je vous invite à me contacter avant la prise de rendez-vous pour déterminer vos besoins et optimiser votre séance. 
-        </p>
+      <div>
+        <div class="headcard">Séance d'hypnose</div>
+        <Card color="#001A5C" url="/assets/index/hands.png" />
       </div>
 
-      <div style="display:flex;" class="mt-4">
-        <div>
-          <ButtonOrangeRed>PRENDRE RDV</ButtonOrangeRed>
+      <div>
+        <div class="headcard">Soin énergétique</div>
+        <Card color="#F05907" url="/assets/index/head.png" />
+      </div>
+    </section>
+
+    <div style="position:relative;top:-3rem;">
+      <LeftBlueFoliage />
+    </div>
+
+    <div
+      style="display:flex; justify-content:space-around; align-items:center;position:relative;top:-150px"
+    >
+      <div
+        style="width:50%;background;margin-left:100px;position:relative;top:3rem"
+      >
+        <div class="comment">
+          <div class="head">POURQUOI PRENDRE RENDEZ-VOUS ?</div>
+          <p>
+            Avez-vous remarqué que malgré notre désir de changement, notre
+            volonté ne suffit pas à nous faire changer durablement ?
+          </p>
+          <p>
+            L’hypnose Ericksonienne (du nom du psychiatre Milton H. Erickson)
+            est une thérapie brève orientée vers la solution. Au bout de
+            quelques séances la personne va se libérer d'un fonctionnement
+            qu'elle n'arrivait pas à modifier de manière consciente, même avec
+            la plus grande des volontés.
+          </p>
+          <p>
+            Chaque séance est unique. Je m’adapte à votre demande. Certains
+            changements prennent plus de temps que d’autres. Et parfois, dès la
+            deuxième séance la magie opère ! Mais d'une manière générale, que ça
+            soit en hypnose ou en soin énergétique, je vous invite à faire au
+            minimum 3 à 5 séances pour vous rendre compte de l’évolution.
+          </p>
+          <p>
+            Je vous accueille au sein d’un cabinet paramédical dans le 20ème à
+            Paris.
+          </p>
+          <p style="margin-top:1rem">
+            <span style="font-weight:bold; text-decoration:underline"
+              >Motif de RDV</span
+            > : L'hypnose thérapeutique vous aide à surmonter de nombreuses problématiques
+            telles que l'anxiété, l'angoisse, les phobies, la dépression, les troubles
+            de la concentration, les compulsions, mais aussi la confiance et l'estime
+            de soi, la difficulté de parler en public, la gestion des émotions. Dans
+            tous les cas, je vous invite à me contacter avant la prise de rendez-vous
+            pour déterminer vos besoins et optimiser votre séance.
+          </p>
+        </div>
+
+        <div style="display:flex;" class="btnrdv">
+          <div>
+            <ButtonOrangeRed>PRENDRE RDV</ButtonOrangeRed>
+          </div>
         </div>
       </div>
+      <div style="margin-left:auto">
+        <CandleVagueOrange />
+      </div>
     </div>
-    <div style="margin-left:auto">
-      <CandleVagueOrange />
-    </div>
-  </div>
 
-  <section style="position:relative;top:-2rem">
-    <LeftBlueFoliage  />
-  </section>
+    <section style="position:relative;top:-2rem">
+      <LeftBlueFoliage />
+    </section>
 
-  <section style="position:relative;top:0rem;margin-right:2rem;">
-    <SectionCertificats />
-  </section>
+    <section style="position:relative;top:0rem;margin-right:2rem;">
+      <SectionCertificats />
+    </section>
 
-  <section style="position:relative;top:-2rem">
-    <ImagesCertificats />
-  </section>
+    <section style="position:relative;top:-2rem">
+      <ImagesCertificats />
+    </section>
 
+    <section style="position:relative;top:-3rem">
+      <TemoignagesComponent>
+        Je consulte régulièrement Françoise pour des problèmes physiques. Non
+        seulement la douleur s’estompe, mais chaque séance m’apporte un grand
+        bien être, un apaisement joyeux et beaucoup de douceur. Elle sait rendre
+        vivant et léger nos corps et nos esprits fatigués, nous révèle avec
+        simplicité notre « essentiel ». Françoise a une très belle énergie
+        pleine d’humanité.
+      
+      </TemoignagesComponent>
+      <div class="mess">
 
-
-  <section style="position:relative;top:-3rem">
-    <Temoignages />
-  </section>
+      </div>
+    </section>
   </div>
 </Layout>
 
 <style>
+  .first-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+
+  .second-content {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  img {
+    transform: scale(0.89);
+  }
+
+  .comment {
+    font-size: 1.3rem;
+    font-family: Tenor;
+    font-style: italic;
+    background: white;
+    color: #2c2c5f;
+    margin-right: 2rem;
+    position: relative;
+    top: 3rem;
+  }
+
+  .comment > p {
+    max-width: 720px;
+    margin-bottom: 1rem;
+  }
+
+  .head {
+    font-family: "Segoe UI";
+    font-style: normal;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 24px;
+    letter-spacing: 0.2rem;
+  }
+
   .hero {
     display: flex;
     justify-content: space-around;
@@ -169,47 +236,17 @@ const darblue = "#001A5C";
     justify-content: space-around;
   }
 
-
   .hero div:first-child {
-    background:red;
     background-image: url("/assets/index/assisetasse.png");
-    background-position: center center ;
+    background-position: center center;
   }
 
   .hero div:nth-child(3) {
-    background:orange;
-    z-index:2;
+    z-index: 2;
     background-image: url("/assets/index/heropot.png");
-    background-repeat:no-repeat;
-    background-position: center center; ;
-    background-size:cover;
-    
-  
-  }
-
-
-  .bienvenue {
-    display: flex;
-    justify-content: space-around;
-    gap: 5px;
-    margin-top: 50px;
-  }
-
-  .bienvenue > div {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .backimg {
-    background-image: url("/assets/index/tachebleu.png");
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
-  }
-
-  .backimg img {
-    object-fit: cover;
-    transform: scale(0.85);
+    background-position: center center;
+    background-size: cover;
   }
 
   .pcard {
@@ -224,7 +261,7 @@ const darblue = "#001A5C";
   }
 
   .head {
-    font-family: 'Segoe UI';
+    font-family: "Segoe UI";
     font-style: normal;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
@@ -254,12 +291,16 @@ const darblue = "#001A5C";
   }
 
   .handwritten {
-    color: #F05907;
+    color: #f05907;
     font-family: Allura, cursive;
-    font-size:1.8rem;
+    font-size: 1.8rem;
     position: relative;
-    top:-2.rem;
+    top: -2rem;
     left: 6rem;
+  }
+
+  .btnrdv {
+    margin-top: 4rem;
   }
 </style>
 
@@ -289,3 +330,4 @@ const darblue = "#001A5C";
     }
   })();
 </script>
+

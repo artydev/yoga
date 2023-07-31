@@ -1,0 +1,14 @@
+
+<div class="temoignages"></div>
+
+<div class="slot"  style="display:none">
+    <slot />
+</div>
+
+<script>
+    import  {GetText} from   "../js/temoignagesaccueil.js";
+    (function () {
+        let t = document.querySelectorAll(".slot")
+        t.forEach(c => GetText(c.innerHTML))
+    })()
+</script>

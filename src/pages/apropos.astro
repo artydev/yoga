@@ -10,8 +10,14 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
     <HeroMassage titre="A PROPOS" />
   </div>
   <section class="first-content">
-    <img src="/assets/index/asiatapropos.png" style="height:600px" />
-    <div>
+    <div style="flex:1;">
+      <div style="display:flex;justify-content:space-around">
+        <img src="/assets/index/asiatapropos.png" />
+      </div>
+   
+    </div>
+   
+    <div style="flex:1">
       <div class="comment">
         <div class="head">HYPNOSE</div>
         <p>
@@ -37,7 +43,7 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
   <RightOrangeFoliage />
 
   <section class="second-content">
-    <div>
+    <div style="flex:1;margin-left:2rem;">
       <div class="comment" style="margin-right:0">
         <div class="head">SOINS ÉNERGÉTIQUES</div>
         <p>
@@ -58,14 +64,14 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
         <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
       </div>
     </div>
-    <div style="position:relative;top:4rem;">
-      <img src="/assets/index/orangeblobplume.png" />
-      <div class="petipasblue">
-        <img src="/assets/index/petipasblue.png" />
+    <div style="position:relative;top:4rem;flex:1">
+      <div style="max-width:65%;margin:0 auto">
+        <img src="/assets/index/orangeblobplume.png" width="100%"/>
       </div>
+     
     </div>
   </section>
-
+</Layout>
   <style>
     .first-content {
       display: flex;
@@ -116,8 +122,8 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
 
     .petipasblue {
       position: absolute;
-      top: 68%;
-      left: 20rem;
+      top: 60%;
+      left: 15rem;
       transform: scale(0.75);
     }
   </style>
@@ -148,4 +154,4 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
       }
     })();
   </script>
-</Layout>
+
