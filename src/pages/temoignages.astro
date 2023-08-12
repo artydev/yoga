@@ -5,6 +5,7 @@ import LeftBlueFoliage from "../widgets/LeftBlueFoliage.astro";
 import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
 import LeftAndRightFoliage from "../widgets/LeftAndRightFoliage.astro";
 import RightAndLeftFoliage from "../widgets/RightAndLeftFoliage.astro";
+
 ---
 
 <Layout>
@@ -21,15 +22,19 @@ import RightAndLeftFoliage from "../widgets/RightAndLeftFoliage.astro";
 <style>
   .target {
     max-width: 70%;
+    height: 500px;
     margin:0 auto;
     background: beige;
+    overflow:hidden;
+    overflow-y:auto;
+
   }
 </style>
 
 <script>
   import van from "../js/van.js";
   import { style } from "typestyle";
-  import { HandWritenMessage } from "../js/tools.js";
+  import { HandWritenMessage, csvToJson } from "../js/tools.js";
 
   const div = van.tags["div"];
   const p = van.tags["p"];
@@ -57,6 +62,10 @@ import RightAndLeftFoliage from "../widgets/RightAndLeftFoliage.astro";
   showMessages()
   showMessages()
   showMessages()
+  showMessages()
+  showMessages()
+  showMessages()
+  showMessages()
 </script>
 
 <script>
@@ -77,13 +86,9 @@ import RightAndLeftFoliage from "../widgets/RightAndLeftFoliage.astro";
     );
   })();
 
+  
+
   (function () {
-    const image = document.getElementById("imgwitness");
-    const foliage = image?.querySelector("img");
-    if (foliage) {
-      foliage.style.display = "block";
-      foliage.style.position = "relative";
-      foliage.style.top = "100px";
-    }
+  
   })();
 </script>

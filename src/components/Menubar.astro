@@ -1,10 +1,8 @@
 ---
 import RdvsButton from "../widgets/RdvsButton.astro";
-
-
 ---
-<header class="flex items-center bg-white justify-center">
-    <nav class="fixed h-12 flex justify-between w-full items-center sm:top-[-60px] md:h-[60px] shadow-md z-10">
+<header>
+    <nav>
         <ul id="menu" data-status="hidden" class="duration-500 items-center bg-white  flex  relative w-full flex-col gap-2 justify-between mt-[-850px] md:mt-[0]  md:flex-row mx-auto md:w-[100%]">
             <li > 
                 <a data-name="accueil" href="/">ACCUEIL</a>
@@ -28,9 +26,8 @@ import RdvsButton from "../widgets/RdvsButton.astro";
                 <a data-name="contacts" href="/contacts">CONTACTS</a> 
             </li>
             <li>
-                <RdvsButton></RdvsButton>
-            </li>    
-                                                          
+               <RdvsButton></RdvsButton>
+            </li>                                                    
         </ul>
         <div id="togglemenu" class= "md:hidden font-bold font text-lg mt-2" style="cursor:pointer">
             <ion-icon name="menu" class="text-3xl text-orange-500"></ion-icon>
@@ -41,58 +38,7 @@ import RdvsButton from "../widgets/RdvsButton.astro";
 
 <style>
     
-    nav {
-        font-size: 17px;
-        height: 90px; 
-        font-family: Tenor;
-        margin-top: 60px;
-        background: white;
-        color :rgb(44, 44, 95)
-        
-    }
 
-    nav ul li:hover {
-        text-decoration: orangered;
-        cursor: pointer;
-        color:rgb(44, 44, 95);
-        text-decoration-line: underline;
-        text-underline-offset: 5px;
-        text-decoration-thickness: 0.2rem; 
-        user-select: none;
-    }
- 
-    #togglemenu {
-        position: absolute;
-        right: 10px;
-    }
-
-    li {
-        white-space: nowrap;
-    }
-
-    li:first-child {
-        position: relative;
-        left: 1rem;
-    }
-
-
-    @media(max-width:760px) {
-        li {
-            margin-bottom: 25px;
-        }
-    }
-    @media(max-width:767px) {
-        nav {
-            top: -60px;
-           
-            height: 55px !important;
-        }
-    }
-
- 
-   a.selected {
-    color:#rgb(44, 44, 95);
-}
   
 </style>
 
