@@ -10,7 +10,6 @@ const styleP = style({
   marginBottom: "30px",
   fontSize: "1.3rem",
   fontFamily: "Tenor",
-  fontStyle: "italic",
   background: "white",
   color: "#2c2c5f",
   margin: "0 auto",

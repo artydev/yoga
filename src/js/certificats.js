@@ -50,7 +50,6 @@ const styleTitle = style({
 const stylePre = style({
   fontSize: "1.3rem",
   fontFamily: "Tenor",
-  fontStyle: "italic",
   background: "white",
   color: "#2c2c5f",
   marginRight:"2rem"
