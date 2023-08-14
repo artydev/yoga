@@ -4,34 +4,38 @@ import Navbar from "../components/Navbar.astro";
 import Menubar from "../components/Menubar.astro";
 import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 import RotateDevice from "../components/RotateDevice.astro";
-
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		 <link rel="stylesheet" href="/globalstyle.css">
-		 <GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap">
-		 </GoogleFontsOptimizer>
-		 <GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Allura&display=swap">
-		 </GoogleFontsOptimizer>
-		<script type="module" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.1.2/ionicons/ionicons.esm.js"></script>
- 
-		<title>YOGA</title>
-		<script>
-			
-		</script>
-	</head>
-	<body>
-		
-			<Navbar></Navbar>
-			<div style="width:100vw;margin:0 auto;"></div>
-			<slot />
-			</div>
-			<Footer></Footer>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/globalstyle.css" />
+    <GoogleFontsOptimizer
+      url="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap"
+    />
+    <GoogleFontsOptimizer
+      url="https://fonts.googleapis.com/css2?family=Allura&display=swap"
+    />
+    <script
+      type="module"
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.1.2/ionicons/ionicons.esm.js"
+    ></script>
+
+    <title>YOGA</title>
+    <script>
+      document.addEventListener("visibilitychange", () => {
+        console.log("Latout Page - Visibility Change");
+      });
+    </script>
+  </head>
+  <body>
+    <Navbar />
+    <div style="width:100vw;margin:0 auto;"></div>
+    <slot />
+
+    <Footer />
+  </body>
 </html>
-
-
