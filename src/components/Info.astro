@@ -1,58 +1,65 @@
 ---
-import ContactezMoi from "../widgets/ButtonOrangeRed.astro"
+import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
 ---
 
 <div class="infopanel">
-    <div class="title">
-        <div style="padding-right:1.2rem;">HYPNOLOGUE &</div>
-        <div style="padding-right:1.2rem;">PRATICIENNE EN SOINS ENERGÉTIQUES À PARIS</div>
+  <div class="title">
+    <div style="padding-right:1.2rem;">HYPNOLOGUE &</div>
+    <div style="padding-right:1.2rem;">
+      PRATICIENNE EN SOINS ENERGÉTIQUES À PARIS
     </div>
-    <p class="content">
-        Certifiée Maître praticienne en hypnose Ericksonienne par l'Académie pour la Recherche et la Connaissance de l'Hypnose Ericksonienne (Arche Paris), je suis également formée à des techniques de soin et d’harmonisation énergétique. 
-    </p>
-    <div style="font-style:normal">
-        <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
-    </div>
-   
+  </div>
+  <p class="content">
+    Certifiée Maître praticienne en hypnose Ericksonienne par l'Académie pour la
+    Recherche et la Connaissance de l'Hypnose Ericksonienne (Arche Paris), je
+    suis également formée à des techniques de soin et d’harmonisation
+    énergétique.
+  </p>
+  <div style="font-style:normal">
+    <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
+  </div>
 </div>
 
 <style>
-    .infopanel {
-       
-        font-size: 1.3rem;
-        font-family: Tenor;
-        background: white;
-        max-width: 40rem;
-        margin: 0 auto;
-        position: relative;
-        top:1rem;
-        height: 330px;
-        padding-top: 2rem;
-        color: #2C2C5F;
-        
-    }
+  .infopanel {
+    font-size: 1.3rem;
+    font-family: Tenor;
+    background: white;
+    max-width: 40rem;
+    margin: 0 auto;
+    position: relative;
+    top: 1rem;
+    height: 330px;
+    padding-top: 2rem;
+    color: #2c2c5f;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.4px);
+    -webkit-backdrop-filter: blur(8.4px);
+  }
 
-    .content {
-        padding-left:20px;
-        padding-right: 20px;
-        width: 95%;
-        margin:0 auto;
-        margin-top: 1rem;
-        margin-bottom: 2.5rem;
-        line-height: 1.6rem;
-        font-size: 1.31rem;
-        text-align: center;
-    }
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6rem;
+    font-size: 1.31rem;
+    text-align: center;
+  }
 
-    .title {
-        padding-left:1.5rem;
-        padding-right: 1.5px;
-        color: #F05907;
-        font-family: 'Tenor';
-        width: 95%;
-        margin:0 auto;
-        font-weight: 600;
-        text-align:center;
-
-    }
+  .title {
+    padding-left: 1.5rem;
+    padding-right: 1.5px;
+    color: #f05907;
+    font-family: "Tenor";
+    width: 95%;
+    margin: 0 auto;
+    font-weight: 600;
+    text-align: center;
+  }
 </style>
