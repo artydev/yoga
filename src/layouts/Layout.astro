@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar.astro";
 import Menubar from "../components/Menubar.astro";
 import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 import RotateDevice from "../components/RotateDevice.astro";
+import ModalCertif from "../components/ModalCertif.astro";
 ---
 
 <html lang="en">
@@ -25,17 +26,12 @@ import RotateDevice from "../components/RotateDevice.astro";
     ></script>
 
     <title>YOGA</title>
-    <script>
-      document.addEventListener("visibilitychange", () => {
-        console.log("Latout Page - Visibility Change");
-      });
-    </script>
   </head>
   <body>
     <Navbar />
     <div style="width:100vw;margin:0 auto;"></div>
     <slot />
-
     <Footer />
+    <ModalCertif></ModalCertif>
   </body>
 </html>

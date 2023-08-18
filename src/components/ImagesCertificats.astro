@@ -1,43 +1,58 @@
 <div class="certificats">
- <div>
+
+  <div>
     <button id="prev">PREV</button>
- </div>
+  </div>
   <div id="slider" class="swipe">
     <div class="swipe-wrap">
       <div>
-        <img src="/assets/index/cert0.png" />
+        <img src="/assets/index/cert0.png"  data-name="cert0.png"/>
       </div>
       <div>
-        <img src="/assets/index/cert1.png" />
+        <img src="/assets/index/cert1.png"  data-name="cert1.png"/>
       </div>
       <div>
-        <img src="/assets/index/cert2.png" />
+        <img src="/assets/index/cert2.png"  data-name="cert2.png"/>
       </div>
       <div>
         <img
           src="/assets/index/cert3.webp"
           style="transform:scale(0.5);position:relative;top:-12rem;"
-        />
+          data-name="cert3.webp"/>
+      </div>
+      <div>
+        <img src="/assets/index/certf04.png"  data-name="certf04.png"/>
+      </div>
+      <div>
+        <img src="/assets/index/certif05.png"  data-name="certif05.png"/>
+      </div>
+      <div>
+        <img src="/assets/index/certif06.png" 
+        style="transform:scale(0.65);position:relative;top:-12rem;"
+         data-name="certif06.png"/>
+      </div>
+      <div>
+        <img src="/assets/index/certif07.jpeg"  data-name="certif07.jpeg"/>
       </div>
     </div>
   </div>
   <div>
     <button id="next">NEXT</button>
- </div>
+  </div>
 </div>
 
-<style>
 
- .certificats {
+<style>
+  .certificats {
     display: flex;
     align-items: center;
     max-width: 640px;
     margin: 0 auto;
-    background:beige;
+    background: beige;
     height: 420px;
     margin-bottom: 3rem;
     gap: 1rem;
- }
+  }
 
   #slider {
     max-width: 630px;
@@ -46,23 +61,20 @@
     cursor: pointer;
     position: relative;
     top: 1.6rem;
- 
   }
   .swipe {
     overflow: hidden;
     visibility: hidden;
-  
   }
   .swipe-wrap {
     overflow: hidden;
-   
   }
   .swipe-wrap > div {
     float: left;
     position: relative;
     overflow: hidden;
-   
   }
+
 
 </style>
 
@@ -85,14 +97,33 @@
   );
 </script>
 
+<script>
+  const lightbox = document.getElementById("lightbox") as HTMLElement;
+  const prev = document.getElementById("prev") as Element;
+  const next = document.getElementById("next");
+  prev.addEventListener("click", () => {
+    window["swipe"].prev();
+  });
+  next?.addEventListener("click", () => {
+    window["swipe"].next();
+  });
+  const swiper = document.querySelector(".swipe");
+  swiper?.addEventListener("click", function (e) {
+    const target = e.target as HTMLElement;
+    if (target.tagName == "IMG") {
+    
+    
+  }});
+</script>
+
 
 <script>
-    const prev = document.getElementById("prev") as Element;
-    const next = document.getElementById("next");
-    prev.addEventListener("click", () => {
-      window["swipe"].prev();
-    })
-    next?.addEventListener("click", () => {
-      window["swipe"].next();
-    })
+  let swipewrap = document.querySelector(".swipe-wrap") as HTMLElement;
+  swipewrap.addEventListener("click", function (e) {
+    const target = e.target as HTMLElement;
+    if (target.tagName === "IMG") {
+      const img = target as HTMLImageElement;
+      globalThis.openModal(img.dataset.name)
+    }
+  })
 </script>
