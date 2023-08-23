@@ -17,7 +17,7 @@ const darblue = "#001A5C";
 <Layout>
   <div style="max-width:100vw;margin:0 auto;overflow:hidden; overflow-y:auto;">
     <section class="hero">
-      <img src="/assets/index/SKYFLOWER.png" style="display:none" />
+      <img src="/assets/index/resfinalhero.webp" style="display:none" />
       <Info></Info>
     </section>
 
@@ -79,7 +79,7 @@ const darblue = "#001A5C";
     >
       <div>
         <div class="headcard">Séance d'hypnose</div>
-        <Card color="#001A5C" url="/assets/index/hands.png" />
+        <Card color="#001A5C" url="/assets/index/mains.png" />
       </div>
 
       <div>
@@ -205,12 +205,37 @@ const darblue = "#001A5C";
   .hero {
     display: flex;
     align-items:center;
-    background-image: url("/assets/index/SKYFLOWER.png");
-    height: 70vh;
-    background-position: center 50px;
+    background-image: url("/assets/index/resfinalhero.webp");
+    width:100vw;
+    height: clamp(30vh, 100vh, 100vh);
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
   }
 
+
+
+  @media screen and (max-width: 960px) {
+    .hero {
+      height: 60vh;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .hero {
+      height: 50vh;
+      background-position: center center;
+    }
+   
+  }
+
+  @media screen and (max-width: 500px) {
+    .hero {
+      height: 40vh;
+      background-position: center center;
+    }
+   
+  }
 
   .pcard {
     text-align: center;
