@@ -134,7 +134,7 @@ function View() {
 
     div(
       { class: styleBlocImage },
-      img({ src: "/assets/index/portraitcircle.png", class: styleImage })
+      img({ src: "/assets/index/skyseeing-circle.png", class: styleImage })
     ),
     div({ class: styleViewSummary }, 
         div(Summary())
