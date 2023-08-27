@@ -18,12 +18,14 @@ const darblue = "#001A5C";
   <div style="max-width:100vw;margin:0 auto;overflow:hidden; overflow-y:auto;">
     <section class="hero">
       <img src="/assets/index/resfinalhero.webp" style="display:none" />
-      <Info></Info>
+      <Info />
     </section>
 
     <section class="first-content">
       <div style="flex:1;">
-        <div style="display:flex;justify-content:space-around;position:relative;top:5rem;">
+        <div
+          style="display:flex;justify-content:space-around;position:relative;top:5rem;"
+        >
           <img src="/assets/index/francoisejeanblob.png" />
         </div>
       </div>
@@ -91,11 +93,8 @@ const darblue = "#001A5C";
     <div
       style="display:flex; justify-content:space-around; align-items:center;position:relative;top:0px"
     >
-      <div
-        style="width:50%;background;margin-left:100px;position:relative;"
-      >
+      <div style="width:50%;background;margin-left:100px;position:relative;">
         <div class="comment">
-         
           <p>
             Chaque séance est unique. Je suis à votre écoute et m’adapte à votre
             demande. Je mets mes outils à votre service pour vous aider à
@@ -111,10 +110,6 @@ const darblue = "#001A5C";
             vous rendre compte de l’évolution. Je vous accueille au sein d’un
             cabinet paramédical dans le 20ème à Paris.
           </p>
-          <p style="font-weight:bold">
-            “Je ne suis pas ce qui m’est arrivé. Je suis ce que j’ai décidé
-            d’être.” C.G. JUNG
-          </p>
         </div>
 
         <div style="display:flex;" class="btnrdv">
@@ -128,38 +123,41 @@ const darblue = "#001A5C";
       </div>
     </div>
 
-    <section style="position:relative;top:-2rem">
+    <section>
       <LeftBlueFoliage />
+      <div style="text-align:center">
+        <p class="citation">
+          “Je ne suis pas ce qui m’est arrivé. Je suis ce que j’ai décidé
+          d’être.” C.G. JUNG
+        </p>
+      </div>
     </section>
 
-    <section style="position:relative;top:0rem;margin-right:2rem;">
-      <SectionCertificats />
-    </section>
-
-    <section style="position:relative;top:-2rem">
-      <ImagesCertificats />
-    </section>
-
-    <section style="position:relative;top:-3rem">
-      <TemoignagesComponent>
-        Je consulte régulièrement Françoise pour des problèmes physiques. Non
-        seulement la douleur s’estompe, mais chaque séance m’apporte un grand
-        bien être, un apaisement joyeux et beaucoup de douceur. Elle sait rendre
-        vivant et léger nos corps et nos esprits fatigués, nous révèle avec
-        simplicité notre « essentiel ». Françoise a une très belle énergie
-        pleine d’humanité.
-      
-      </TemoignagesComponent>
-      <div class="mess">
+    <section>
+      <div>
+        <SectionCertificats />
+      </div>
+      <div style="margin-top:15rem;">
+        <ImagesCertificats />
       </div>
     </section>
   </div>
+
+  <section>
+    <TemoignagesComponent>
+      Je consulte régulièrement Françoise pour des problèmes physiques. Non
+      seulement la douleur s’estompe, mais chaque séance m’apporte un grand bien
+      être, un apaisement joyeux et beaucoup de douceur. Elle sait rendre vivant
+      et léger nos corps et nos esprits fatigués, nous révèle avec simplicité
+      notre « essentiel ». Françoise a une très belle énergie pleine d’humanité.
+    </TemoignagesComponent>
+  </section>
 </Layout>
 
 <style>
   body {
     overflow: hidden;
-    overflow-y:auto;
+    overflow-y: auto;
   }
 
   .first-content {
@@ -180,7 +178,7 @@ const darblue = "#001A5C";
   .comment {
     font-size: 1.3rem;
     font-family: Tenor;
-  
+
     background: white;
     color: #2c2c5f;
     margin-right: 2rem;
@@ -204,16 +202,14 @@ const darblue = "#001A5C";
 
   .hero {
     display: flex;
-    align-items:center;
+    align-items: center;
     background-image: url("/assets/index/resfinalhero.webp");
-    width:100vw;
+    width: 100vw;
     height: clamp(30vh, 100vh, 100vh);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-
-
 
   @media screen and (max-width: 960px) {
     .hero {
@@ -226,7 +222,6 @@ const darblue = "#001A5C";
       height: 50vh;
       background-position: center center;
     }
-   
   }
 
   @media screen and (max-width: 500px) {
@@ -234,7 +229,6 @@ const darblue = "#001A5C";
       height: 40vh;
       background-position: center center;
     }
-   
   }
 
   .pcard {
@@ -260,7 +254,7 @@ const darblue = "#001A5C";
   .comment {
     font-size: 1.3rem;
     font-family: Tenor;
-   
+
     background: white;
     color: #2c2c5f;
     margin-right: 2rem;
@@ -290,6 +284,17 @@ const darblue = "#001A5C";
   .btnrdv {
     margin-top: 4rem;
   }
+
+  .citation {
+    font-size: 1.5rem;
+    font-family: Tenor;
+    background: white;
+    font-weight: bold;
+    color: #2c2c5f;
+    position: relative;
+    font-style: italic;
+    margin-bottom: 3rem;
+  }
 </style>
 
 <script>
@@ -318,4 +323,3 @@ const darblue = "#001A5C";
     }
   })();
 </script>
-

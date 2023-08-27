@@ -3,6 +3,7 @@ import RdvsButtonFooter from "../widgets/RdvsButtonFooter.astro";
 import Social from "../components/Social.astro";
 ---
 
+<!--
 <div class="footer">
   <div class="wrapcontent">
     <div class="content">
@@ -28,14 +29,51 @@ import Social from "../components/Social.astro";
     </div>
   </div>
 </div>
+ -->
+<div style="position:relative">
+  <div style="display:flex;justify-content:space-around;padding-top:9rem;color:white;height:350px;position:absolute;width:100%">
+     <div style="display:flex;gap:3rem; width:calc(100vw / 3)">
+      <ul>
+        <li>ACCUEIL</li>
+        <li>A PROPOS</li>
+        <li>SÉANCES</li>
+        <li>TÉMOIGNAGES</li>
+      </ul>
+      <ul>
+       
+        <li>TARIFS</li>
+        <li>HEY HO LETS GO</li>
+        <li>CONTACT</li>
+  
+      </ul>
+     </div>
+     <div>
+      <div onclick="alert('test')">
+        <RdvsButtonFooter />
+      </div>
+     </div>
+     <div style="display:flex;gap:3rem; width:calc(100vw / 3);justify-content:space-around">
+      RIGHT
+     </div>
+  </div>
+  <div style="height: 350px; overflow: hidden;">
+    <svg
+      viewBox="0 0 500 150"
+      preserveAspectRatio="none"
+      style="height: 100%; width: 100vw;"
+      ><path
+        d="M-8.74,12.33 C124.43,-36.02 218.11,99.17 513.25,-4.43 L500.00,150.00 L0.00,150.00 Z"
+        style="stroke: none; fill: #001A5C;"></path></svg>
+  </div>
+</div>
 
 <style>
   .footer {
-    background-image: url("/assets/common/bluewave.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 300px;
     display: block;
+    background-color: #001a5c;
     background-position: bottom;
     color: white;
     position: relative;
@@ -95,5 +133,3 @@ import Social from "../components/Social.astro";
     }
   }
 </style>
-
-

@@ -1,7 +1,9 @@
 <div class="certificats">
 
   <div>
-    <button id="prev">PREV</button>
+    <button id="prev">
+      <i class="arrow left"></i>
+    </button>
   </div>
   <div id="slider" class="swipe">
     <div class="swipe-wrap">
@@ -37,7 +39,9 @@
     </div>
   </div>
   <div>
-    <button id="next">NEXT</button>
+    <button id="next" >
+      <i class="arrow right"></i>
+    </button>
   </div>
 </div>
 
@@ -48,9 +52,9 @@
     align-items: center;
     max-width: 640px;
     margin: 0 auto;
-    background: beige;
+
     height: 420px;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     gap: 1rem;
   }
 
@@ -62,6 +66,12 @@
     position: relative;
     top: 1.6rem;
   }
+
+  #slider  img {
+    position: relative; 
+   
+  }
+
   .swipe {
     overflow: hidden;
     visibility: hidden;
@@ -75,6 +85,27 @@
     overflow: hidden;
   }
 
+  .arrow {
+    border: solid rgb(0, 2, 11);
+    border-width: 0 3px 3px 0;
+    border-radius: 15%;
+    display: inline-block;
+    padding: 3px;
+    position: relative;
+    top:1rem;
+  }
+
+
+  .right {
+    transform: rotate(-45deg) scale(2);
+    -webkit-transform: rotate(-45deg) scale(2);
+  }
+
+  .left {
+    font-size: 2rem;
+    transform: rotate(135deg) scale(2);
+    -webkit-transform: rotate(135deg) scale(2);
+  }
 
 </style>
 

@@ -15,12 +15,14 @@ const styleView = style({
   top: "0px"
 });
 
+// TEXTE
 const styleViewSummary = style ({
-    width: "50%"
+    width: "50vw",
+    background: "green"
 })
 
 const styleContentSummary = style({
-  width:"70%",
+  width:"100%",
   margin: "0 auto",
 });
 
@@ -61,6 +63,13 @@ const styleLogoImage = style({
   marginTop: "32px",
 });
 
+const styleLogoImageRound = style({
+  display: "block",
+  width: "100px",
+  marginTop: "32px",
+});
+
+
 const styleHandWrite = style({
   position:"relative", 
   left: "100px",
@@ -73,13 +82,20 @@ const styleHandWrite = style({
 })
 
 function YogaImage() {
-  return div(
-    img({
+  return div({style:"background:red"},
+    
+    div(img({
       class: styleLogoImage,
       src: "/assets/index/logosyndicat.png",
-    })
+    })),
+    div(
+    img({
+      class: styleLogoImageRound,
+      src: "/assets/index/logosyndicat-round.jpg",
+    }))
   );
 }
+
 
 
 function SummaryTitle() {
@@ -113,7 +129,7 @@ Les séances d'hypnose et les soins énergétiques ne se substituent
 en aucun cas à la médecine allopathique. Ils restent
 complémentaires d'un éventuel suivi médical.        
         `
-      )
+      ),
     )
   );
 }
