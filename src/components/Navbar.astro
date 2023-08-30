@@ -1,6 +1,6 @@
 ---
 import RdvsButton from "../widgets/RdvsButton.astro";
-
+import Telephone from "../widgets/Telephone.astro";
 
 ---
 <header class="flex items-center bg-white justify-center">
@@ -10,7 +10,7 @@ import RdvsButton from "../widgets/RdvsButton.astro";
                 <a data-name="accueil" href="/">ACCUEIL</a>
             </li>
             <li>
-                <a data-name="apropos" href="/apropos">A PROPOS</a>
+                <a data-name="apropos" href="/apropos">À PROPOS</a>
             </li>
             <li>
                 <a data-name="seances" href="/seances">SÉANCES</a>  
@@ -24,8 +24,12 @@ import RdvsButton from "../widgets/RdvsButton.astro";
             <li>
                 <a data-name="letsgo" href="/letsgo">BLOG LET'S GO</a> 
             </li> 
+
             <li>
                 <a data-name="contacts" href="/contacts">CONTACTS</a> 
+            </li>
+            <li>
+               <Telephone />
             </li>
             <li>
                 <RdvsButton></RdvsButton>
@@ -47,8 +51,8 @@ import RdvsButton from "../widgets/RdvsButton.astro";
         font-family: Tenor;
         margin-top: 60px;
         background: white;
-        color :rgb(44, 44, 95)
-        
+        color :rgb(44, 44, 95);
+        border-bottom: 5px solid rgba(0,0,0,0.2);
     }
 
     nav ul li:hover {

@@ -1,0 +1,131 @@
+---
+import RdvsButtonFooter from "../widgets/RdvsButtonFooter.astro";
+import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
+import Social from "../components/Social.astro";
+---
+
+<div
+  style="display:flex;justify-content:space-around;padding-top:9rem;color:white;height:350px;position:absolute;width:100%"
+>
+  <div
+    style="display:flex;gap:3rem; width:calc(100vw / 3); justify-content:space-around"
+  >
+    <div style="display:flex; gap:3rem">
+      <ul>
+        <li>ACCUEIL</li>
+        <li>A PROPOS</li>
+        <li>SÉANCES</li>
+        <li>TÉMOIGNAGES</li>
+      </ul>
+      <ul>
+        <li>TARIFS</li>
+        <li>HEY HO LET'S GO</li>
+        <li>CONTACT</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="contact">
+    <RdvsButtonFooter />
+  </div>
+  <div class="wrapright">
+    <div style="position:absolute;bottom:0">
+      <h1>Socila</h1>
+    </div>
+  </div>
+</div>
+<div style="height: 350px; overflow: hidden; position:relative;z-index:-1">
+  <img
+    src="/assets/index/upfoliageorange.png"
+    style="position:absolute;right:0;top:8rem;"
+  />
+  <svg
+    viewBox="0 0 500 150"
+    preserveAspectRatio="none"
+    style="height: 100%; width: 100vw;"
+    ><path
+      d="M-8.74,12.33 C124.43,-36.02 218.11,99.17 513.25,-4.43 L500.00,150.00 L0.00,150.00 Z"
+      style="stroke: none; fill: #001A5C;"></path></svg
+  >
+</div>
+
+<style>
+  .footer {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    display: block;
+    background-color: #001a5c;
+    background-position: bottom;
+    color: white;
+    position: relative;
+  }
+
+  .wrapcontent {
+    position: absolute;
+    bottom: 10px;
+  }
+
+  .content {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+  }
+
+  .wraplist {
+    width: calc(100vw / 3);
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .left {
+    line-height: 2.5rem;
+    position: relative;
+    bottom: 1rem;
+    font-size: 1.2rem;
+    font-family: Tenor;
+  }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .wrapcenter {
+    width: calc(100vw / 3);
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @media (max-width: 960px) {
+    .footer {
+      background-size: contain;
+      background-position: bottom;
+    }
+    .left {
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+  }
+
+  @media (min-width: 961px) {
+    .footer {
+      background-position-y: 10px;
+    }
+  }
+
+  .wrapright {
+    position: relative;
+    width: calc(100vw / 3);
+    display: flex;
+    justify-content: end;
+  }
+</style>
+
+<script>
+  document.getElementById("contact")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    globalThis.sendMail();
+  });
+</script>

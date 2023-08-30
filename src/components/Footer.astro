@@ -1,135 +1,115 @@
 ---
 import RdvsButtonFooter from "../widgets/RdvsButtonFooter.astro";
+import Righty from "../widgets/Righty.astro";
 import Social from "../components/Social.astro";
+import Wave from "../widgets/Wave.astro";
+import TelephoneSticky from "../widgets/TelephoneSticky.astro"
 ---
 
-<!--
-<div class="footer">
-  <div class="wrapcontent">
-    <div class="content">
-      <div class="wraplist">
-        <div class="left">
-          <h1>ACCUEIL</h1>
-          <h1>A PROPOS</h1>
-          <h1>SÉANCES</h1>
-          <h1>TÉMOIGNAGES</h1>
-          <h1>TARIFS</h1>
-          <h1>HEY HO LETS GO</h1>
-          <h1>CONTACT</h1>
-        </div>
-      </div>
-      <div class="wrapcenter">
-        <div class="center">
-          <div onclick="alert('test')">
-            <RdvsButtonFooter />
-          </div>
-        </div>
-      </div>
-      <Social />
-    </div>
-  </div>
-</div>
- -->
-<div style="position:relative">
-  <div style="display:flex;justify-content:space-around;padding-top:9rem;color:white;height:350px;position:absolute;width:100%">
-     <div style="display:flex;gap:3rem; width:calc(100vw / 3)">
+<div class="myfooter">
+  <div class="wave"><Wave /></div>
+  <div class="containt">
+    <div class="right">
       <ul>
         <li>ACCUEIL</li>
         <li>A PROPOS</li>
         <li>SÉANCES</li>
+      </ul>
+
+      <ul>
         <li>TÉMOIGNAGES</li>
+        <li>TARIFS</li>
+        <li>BLOG LETS'S GO</li>
       </ul>
       <ul>
-       
-        <li>TARIFS</li>
-        <li>HEY HO LETS GO</li>
         <li>CONTACT</li>
-  
       </ul>
-     </div>
-     <div>
-      <div onclick="alert('test')">
-        <RdvsButtonFooter />
+    </div>
+    <div id="contact" class="center"><RdvsButtonFooter /></div>
+    <div class="left">
+      <div style="width:10rem">
+      <TelephoneSticky />
       </div>
-     </div>
-     <div style="display:flex;gap:3rem; width:calc(100vw / 3);justify-content:space-around">
-      RIGHT
-     </div>
+      <div class="social">
+        <Social />
+      </div>
+      
+      <div class="foliage">
+        <Righty />
+      </div>
+    </div>
   </div>
-  <div style="height: 350px; overflow: hidden;">
-    <svg
-      viewBox="0 0 500 150"
-      preserveAspectRatio="none"
-      style="height: 100%; width: 100vw;"
-      ><path
-        d="M-8.74,12.33 C124.43,-36.02 218.11,99.17 513.25,-4.43 L500.00,150.00 L0.00,150.00 Z"
-        style="stroke: none; fill: #001A5C;"></path></svg>
-  </div>
-</div>
 
-<style>
-  .footer {
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
-    display: block;
-    background-color: #001a5c;
-    background-position: bottom;
-    color: white;
-    position: relative;
-  }
-
-  .wrapcontent {
-    position: absolute;
-    bottom: 10px;
-  }
-
-  .content {
-    display: flex;
-    width: 100vw;
-    justify-content: space-between;
-  }
-
-  .wraplist {
-    width: calc(100vw / 3);
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .left {
-    line-height: 2.5rem;
-    position: relative;
-    bottom: 1rem;
-    font-size: 1.2rem;
-    font-family: Tenor;
-  }
-
-  .center {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .wrapcenter {
-    width: calc(100vw / 3);
-    display: flex;
-    justify-content: space-around;
-  }
-
-  @media (max-width: 960px) {
-    .footer {
-      background-size: contain;
-      background-position: bottom;
+  <style>
+    .myfooter {
+      height: 13rem;
+      background: transparent;
+      color: white;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      font-family: "Century Gothic";
+      font-size: 15px;
+      font-weight: 200;
+      letter-spacing: 0.07em;
     }
+
+    .containt {
+      display: flex;
+      width: 99vw;
+      justify-content: space-between;
+    }
+
+    .wave {
+      display: block;
+      height: 13rem;
+      position: absolute;
+      z-index: -1;
+      width: 100vw;
+    }
+
+    .right {
+      display: flex;
+      flex-shrink: 0;
+      width: calc(100vw / 3);
+      justify-content: space-around;
+      gap: -20rem;
+      align-items: center;
+    }
+
     .left {
-      font-size: 1rem;
-      line-height: 2rem;
+      display: flex;
+      width: calc(100vw / 3);
+      justify-content: flex-end;
+      align-items: center;
+      background-color: red;
+      height:0;
     }
-  }
 
-  @media (min-width: 961px) {
-    .footer {
-      background-position-y: 10px;
+    .center {
+      width: calc(100vw / 3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-  }
-</style>
+
+    .foliage {
+      transform: rotate(190deg) translateY(.5rem) translateX(-2rem) scale(0.87);
+      position: absolute;
+      z-index: -1;
+    }
+
+    .social {
+      position: relative;
+      top: 5rem;
+      right: 3rem;
+    }
+  </style>
+
+  <script>
+    document.getElementById("contact")?.addEventListener("click", (e) => {
+      e.preventDefault();
+      globalThis.sendMail();
+    });
+  </script>
+</div>

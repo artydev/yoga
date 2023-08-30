@@ -8,19 +8,19 @@ const target = document.querySelector(".temoignages");
 
 const styleP = style({
   marginBottom: "30px",
-  fontSize: "1.3rem",
-  fontFamily: "Tenor",
+  fontSize: "1.1rem",
+  fontFamily: "Segoe UI",
+  fontWeight: 400,
   background: "white",
   color: "#2c2c5f",
   margin: "0 auto",
 });
 
-const styleView = style({
-
-});
+const styleView = style({});
 
 const Titre = style({
-  fontSize: "2rem",
+  fontSize: "1.5rem",
+  color: "#2c2c5f",
 });
 
 const Content = style({

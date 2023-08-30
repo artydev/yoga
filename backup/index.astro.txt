@@ -253,7 +253,7 @@ const darblue = "#001A5C";
     text-align: center;
     margin-top: 15px;
 
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .lastfoliage {

@@ -5,6 +5,7 @@ import Menubar from "../components/Menubar.astro";
 import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 import RotateDevice from "../components/RotateDevice.astro";
 import ModalCertif from "../components/ModalCertif.astro";
+var dev = true
 ---
 
 <html lang="en">
@@ -24,17 +25,36 @@ import ModalCertif from "../components/ModalCertif.astro";
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.1.2/ionicons/ionicons.esm.js"
     ></script>
-
     <title>YOGA</title>
   </head>
-  <body>
-   
-      <Navbar />
-      <div style="width:100vw;margin:0 auto;"></div>
-      <slot />
-      <Footer />
-      <ModalCertif></ModalCertif>
-  
 
+  <body>
+    <Navbar />
+    <div style="width:100vw;margin:0 auto;"></div>
+    <slot />
+    <Footer />
+    <ModalCertif />
+    <a id="mailer"></a>
+    {
+     ({dev}) 
+      &&  <script is:inline src="/js/dest.js"></script>
+      ||  <script is:inline src="/js/destobfus.js"></script>
+    }
+   
+    {
+      ({dev}) && console.log("IN EV")
+    }
+
+    <script is:inline>
+      window.sendMail = function (target = "mailer") {
+        document
+          .getElementById(target)
+          ?.setAttribute(
+            "href",
+            `mailto:${destx()}?subject=demande%20de%20contact`
+          );
+        document.getElementById(target)?.click();
+      }
+    </script>
   </body>
 </html>

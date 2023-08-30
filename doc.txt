@@ -1,0 +1,14 @@
+Obfuscation : 
+
+
+ Page Layout
+
+     window.sendMail = function (target = "mailer") {
+        document
+          .getElementById(target)
+          ?.setAttribute(
+            "href",
+            `mailto:salvatore.didio@gmail.com?subject=demande%20de%20contact`
+          );
+        document.getElementById(target)?.click();
+      }

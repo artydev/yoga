@@ -5,17 +5,15 @@ import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
 <div class="infopanel">
   <div class="title">
     <div>HYPNOLOGUE</div>
-    <div>
-    </div>
+    <div></div>
     ET PRATICIENNE EN SOINS ÉNERGÉTIQUES
-    <div>
-      À PARIS
-    </div>
+    <div>À PARIS</div>
   </div>
   <p class="content">
     Certifiée Maître praticienne en hypnose Ericksonienne par l'Académie de la
-    Recherche et  Connaissance de l'Hypnose Ericksonienne (Arche - Paris), je
-    suis également énergéticienne 
+    Recherche et Connaissance de l'Hypnose Ericksonienne (Arche - Paris).
+    <br />
+    Je suis également énergéticienne.
   </p>
   <div style="font-style:normal">
     <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
@@ -24,15 +22,16 @@ import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
 
 <style>
   .infopanel {
-
-    font-family: Tenor;
+    font-family: "Segoe UI";
+    font-weight: 400;
     background: white;
-    max-width: 100%;
+    max-width: 80%;
     margin: 0 auto;
     position: relative;
     top: 1rem;
-    margin-left:2rem;
-    margin-right:2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin: 0 auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
     color: #2c2c5f;
@@ -42,14 +41,14 @@ import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.4px);
     -webkit-backdrop-filter: blur(8.4px);
-   
     z-index: 1;
+
   }
 
   .content {
     max-width: 60%;
     margin: 0 auto;
-    font-size: clamp(1.1rem, 2.5vw,  2rem);
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
     text-align: center;
     
   }
@@ -60,29 +59,25 @@ import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
     margin: 0 auto;
     font-weight: 600;
     text-align: center;
-    font-size: clamp(1.1rem, 3vw,  2rem);
+    font-size: clamp(1.1rem, 3vw, 2rem);
   }
 
-
-  @media screen  and  (max-width: 380px) {
+  @media screen and (max-width: 380px) {
     .infopanel {
       position: relative;
-      top:103px;
+      top: 103px;
       border-radius: 0px;
-      margin:0;
-     
+      margin: 0;
       background-color: white;
       opacity: 0.95;
+      margin: 0 auto;
     }
   }
-    
-  
 
   @media screen and (max-width: 650px) {
     .infopanel {
-     margin:0.2rem;
-     margin-top:1.5rem;
+      margin: 0.2rem;
+      margin-top: 1.5rem;
     }
-   
   }
 </style>
