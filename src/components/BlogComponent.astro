@@ -1,0 +1,18 @@
+---
+const {urlphoto, date, titre, texte} = Astro.props
+---
+
+<div style="display:flex;width:100%;max-width: 1280px;margin:0 auto;height:300px;overflow:auto">
+    <div style="max-width:300px">
+        <img src={urlphoto} width="100%" alt="">
+    </div>
+    
+    <div style="height:25vh;overflow:auto">
+        <div>DATE</div>
+        <div>{titre}</div>
+        
+            <slot />
+       
+       
+    </div>
+</div>

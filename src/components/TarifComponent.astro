@@ -1,0 +1,101 @@
+<div class="page">
+  <p>
+    Je vous accueille toute la semaine à mon cabinet dans 20ème à Paris et les
+    lundis au Studio Marga dans le 11ème. Je propose également des séances à
+    distance et à domicile.
+  </p>
+  <div style="text-align:center;margin-top:2rem;">
+    <p>
+      Téléphone : <span class="tel"
+        >06 85 53 82 73<span></span>
+        <p>
+          ou par mail en cliquant <span id="contacttarif"
+            ><b style="text-decoration:underline">ici</b></span
+          >
+        </p>
+      </span>
+      <div style="text-align:center;margin-top:2rem;">
+        <a
+          href="https://www.google.com/maps/place/Fran%C3%A7oise+Lefeuvre+-+Praticienne+en+hypnose+ericksonienne+-+Paris+20/@48.8578636,2.3891272,14.74z/data=!3m1!5s0x47e67209c5ba51e1:0xec23dc7d96a8fe46!4m14!1m7!3m6!1s0x47e67303acd3e371:0xbeb2ab80431345b1!2s%F0%9F%8F%BB%E2%80%8D+%EF%B8%8F+Fran%C3%A7oise+Lefeuvre+-+Praticienne+en+hypnose+ericksonienne+-+Paris+11!8m2!3d48.8546266!4d2.3816881!16s%2Fg%2F11h_wy51b8!3m5!1s0x47e66dca4a7a52f7:0x8f4cb19e271b8d1a!8m2!3d48.8574478!4d2.4000833!16s%2Fg%2F11s8dm_r2j"
+          >Cabinet paramédical au 6 rue de Fontarabie 75020</a
+        >
+      </div>
+      <div style="margin-top:2rem;margin-bottom:1rem;">
+        <div style="text-align:center;font-weight:bold">TARIFS</div>
+        <div style="text-align:center">
+          <ul>
+            <li>
+              80€ la première séance d'hypnose puis 75€ les séances suivantes
+            </li>
+            <li>80€ le soin énergétique (1h)</li>
+            <li>65€ euros pour les sans emplois, intermittents, étudiants</li>
+          </ul>
+          <div style="margin-top:2rem;margin-bottom:1rem;">
+            <div style="text-align:center;font-weight:bold">
+              TARIFS A DISTANCE*
+            </div>
+            <div style="text-align:center">
+              <ul>
+                <li>80€ la séance d'hypnose (1h)</li>
+              </ul>
+            </div>
+          </div>
+          <div style="margin-top:2rem;margin-bottom:1rem;">
+            <div style="text-align:center;font-weight:bold">À DOMICILE*</div>
+            <div style="text-align:center">
+              <ul>
+                <li>De 100 à 160€ (1h) en fonction du temps de déplacement.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p>
+  </div>
+</div>
+<div class="info">
+  *Séances payables à l'avance par virement
+</div>
+<div class="info">
+  Francoise Lefeuvre - Siret 795 241 546 00014
+</div>
+
+<style>
+  .page {
+    margin-top: 20rem;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    font-family: "Segoe UI";
+    font-weight: 400;
+    color: #2c2c5f;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .info {
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: "Segoe UI";
+    font-weight: 400;
+    color: #2c2c5f;
+    margin-top: 3rem;
+    margin-bottom: 3rem
+  }
+
+  #contacttarif {
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: underline !important;
+  }
+</style>
+
+<script>
+  document.getElementById("contacttarif")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    globalThis.sendMail();
+  });
+</script>

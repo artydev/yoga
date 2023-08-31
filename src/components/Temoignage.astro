@@ -4,28 +4,32 @@ const { name, titre } = Astro.props;
 
 <div class="temoignage">
   <div class="nom">{name}</div>
-  <div >{titre}</div>
-   <slot />
+  <div class="titre">{titre}</div>
+  <slot />
 </div>
 
-
 <style>
-    .temoignage {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem;
-        font-size: 0.86rem;
-        width: 360px
-    }
+  .temoignage {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.86rem;
+    width: 360px;
+    color:#2c2c5f;
+  }
 
-    .nom {
-        font-family: Allura;
-  font-size: 2rem;
-  color: #f05907;
-  position: relative;
- 
+  .titre {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
 
-}
-    
+  .nom {
+    font-family: Allura;
+    font-size: 2rem;
+    color: #f05907;
+    position: relative;
+    font-weight: 400;
+  }
 </style>
