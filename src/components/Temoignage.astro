@@ -1,0 +1,31 @@
+---
+const { name, titre } = Astro.props;
+---
+
+<div class="temoignage">
+  <div class="nom">{name}</div>
+  <div >{titre}</div>
+   <slot />
+</div>
+
+
+<style>
+    .temoignage {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.86rem;
+        width: 360px
+    }
+
+    .nom {
+        font-family: Allura;
+  font-size: 2rem;
+  color: #f05907;
+  position: relative;
+ 
+
+}
+    
+</style>

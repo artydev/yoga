@@ -5,7 +5,7 @@ import Menubar from "../components/Menubar.astro";
 import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 import RotateDevice from "../components/RotateDevice.astro";
 import ModalCertif from "../components/ModalCertif.astro";
-var dev = true
+var dev = true;
 ---
 
 <html lang="en">
@@ -19,6 +19,9 @@ var dev = true
     />
     <GoogleFontsOptimizer
       url="https://fonts.googleapis.com/css2?family=Allura&display=swap"
+    />
+    <GoogleFontsOptimizer 
+      url="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap"
     />
     <script
       type="module"
@@ -36,14 +39,12 @@ var dev = true
     <ModalCertif />
     <a id="mailer"></a>
     {
-     ({dev}) 
-      &&  <script is:inline src="/js/dest.js"></script>
-      ||  <script is:inline src="/js/destobfus.js"></script>
+      ({ dev } && <script is:inline src="/js/dest.js" />) || (
+        <script is:inline src="/js/destobfus.js" />
+      )
     }
-   
-    {
-      ({dev}) && console.log("IN EV")
-    }
+
+    {{ dev } && console.log("IN EV")}
 
     <script is:inline>
       window.sendMail = function (target = "mailer") {
@@ -54,7 +55,34 @@ var dev = true
             `mailto:${destx()}?subject=demande%20de%20contact`
           );
         document.getElementById(target)?.click();
-      }
+      };
+    </script>
+    <script
+      src="https://static.elfsight.com/platform/platform.js?onload=test"
+      data-use-service-core
+      defer></script>
+    <div id="bc">
+      <div class="elfsight-app-d1095e31-2a31-47b0-9022-67301b69e2cf"></div>
+    </div>
+
+    <script>
+      const observer = new IntersectionObserver(([e]) => {}, {
+        threshold: [1],
+      });
+
+      window.onload = function () {
+        setTimeout(() => {
+          const stickyElm = document.querySelector(".kyAUVn");
+          observer.observe(stickyElm);
+          stickyElm.style = `
+          position: fixed;
+          height: 5rem;
+          top: calc(100vh - 7rem) !important;
+          left: -1.5rem;
+          z-index:1000;
+        `;
+        }, 500);
+      };
     </script>
   </body>
 </html>

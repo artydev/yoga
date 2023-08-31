@@ -9,6 +9,7 @@ import CandleVagueOrange from "../widgets/CandleVagueOrange.astro";
 import SectionCertificats from "../components/SectionCertificats.astro";
 import ImagesCertificats from "../components/ImagesCertificats.astro";
 import TemoignagesComponent from "../components/TemoignageAccueil.astro";
+import Temoignage from "../components/Temoignage.astro";
 import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
 
 const darblue = "#001A5C";
@@ -56,12 +57,13 @@ const darblue = "#001A5C";
             Paris.
           </p>
           <p style="margin-top:1rem">
-            L'hypnose thérapeutique vous aide à surmonter de nombreuses problématiques
-            telles que l'anxiété, l'angoisse, les phobies, la dépression, les troubles
-            de la concentration, les compulsions, mais aussi la confiance et l'estime
-            de soi, la difficulté de parler en public, la gestion des émotions. Dans
-            tous les cas, je vous invite à me contacter avant la prise de rendez-vous
-            pour déterminer vos besoins et optimiser votre séance.
+            L'hypnose thérapeutique vous aide à surmonter de nombreuses
+            problématiques telles que l'anxiété, l'angoisse, les phobies, la
+            dépression, les troubles de la concentration, les compulsions, mais
+            aussi la confiance et l'estime de soi, la difficulté de parler en
+            public, la gestion des émotions. Dans tous les cas, je vous invite à
+            me contacter avant la prise de rendez-vous pour déterminer vos
+            besoins et optimiser votre séance.
           </p>
         </div>
         <div style="width:150px;margin-top:6rem;">
@@ -142,13 +144,63 @@ const darblue = "#001A5C";
   </div>
 
   <section>
-    <TemoignagesComponent>
+    <h1 class="titletemoin">TÉMOIGNAGES</h1>
+    <div class="temoignages">
+    <Temoignage name="Hélène" titre="UN GRAND BIEN-ÊTRE">
       Je consulte régulièrement Françoise pour des problèmes physiques. Non
       seulement la douleur s’estompe, mais chaque séance m’apporte un grand bien
       être, un apaisement joyeux et beaucoup de douceur. Elle sait rendre vivant
       et léger nos corps et nos esprits fatigués, nous révèle avec simplicité
       notre « essentiel ». Françoise a une très belle énergie pleine d’humanité.
-    </TemoignagesComponent>
+    </Temoignage>
+    <Temoignage name="Anne-Cécile" titre="RESSOURCÉE">
+      " Françoise a une très grande sensibilité dans les mains. Des mains qui
+      écoutent. Je suis venue voir Françoise pour de la fatigue physique et
+      émotionnelle. Les soins que j'ai reçus m'ont apporté de la détente, de
+      l'apaisement et je me suis aussi sentie ressourcée. C'est compliqué de
+      décrire ce que l'on peut ressentir, mais chaque fois cela m'a fait
+      énormément de bien, c'est sûr. Je recommande vivement ! "
+    </Temoignage>
+    <Temoignage name="Clémentine" titre="SOULAGEMENT">
+      " J’ai souvent mal au dos, depuis longtemps. C’est lors d’une de ces
+      périodes crispées de douleur plus aigüe, que Françoise m’a parlé de son
+      travail. Je me suis dit « pourquoi pas ? » J’ai essayé. Le soulagement a
+      été immédiat. Une sensation d’immense détente musculaire, de remise en
+      route, en place durable. Alors j’y reviens régulièrement."
+    </Temoignage>
+    <Temoignage name="Sophie" titre="A L'ÉCOUTE">
+      " Soin énergétique efficace pratiqué par une thérapeute chaleureuse et à
+      l’écoute. Je suis rentrée avec des questionnements sur mon chemin de vie
+      et je suis sortie avec un positionnement plus juste et recentré, et cerise
+      sur le gâteau, un mal de dos disparu."
+    </Temoignage>
+
+    <Temoignage name="Caryl" titre="VIVIFIANT">
+      "Ne tenant pas en place, l'idée de rester allongé une heure pendant qu'une
+      demi heure "main soucoupe volante" vous passe par-dessus me laissait
+      perplexe, quoi que curieux. Françoise L. a non seulement réussi à
+      m’aplatir près d'une heure mais aussi à diffuser de la chaleur dans mon
+      corps, dès lors devenu très féminin. Une sensation agréable et vivifiante
+      que je vous recommande grandement."
+    </Temoignage>
+    <Temoignage name="Elisa" titre="MOMENT PRÉCIEUX">
+      "Très sensible à la pratique de Françoise, chaque séance a été un moment
+      fort et précieux. Les bénéfices s’en ressentent longtemps après. Bref,
+      allez-y, faites-vous du bien ! »
+    </Temoignage>
+    <Temoignage name="Hannah" titre="MERVEILLEUX">
+      "Merci Françoise pour cette merveilleuse séance, je sens que les effets
+      vont m'aider pendant un bon moment ! »
+    </Temoignage>
+    <Temoignage name="Jérôme" titre="MERCI">
+      "Merveilleuses séances d'hypnose qui m'ont beaucoup aidées... Merci
+      Françoise."
+    </Temoignage>
+    <Temoignage name="ALICE" titre="SÉRÉNITÉ">
+      " Grâce aux séances de Françoise j’ai découvert un bien être qui m’a
+      permis d’approfondir une recherche sur moi-même en toute sérénité."
+    </Temoignage>
+    </div>
   </section>
 </Layout>
 
@@ -207,6 +259,13 @@ const darblue = "#001A5C";
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .titletemoin {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    text-align: center;
   }
 
   @media screen and (max-width: 960px) {
@@ -292,6 +351,16 @@ const darblue = "#001A5C";
     position: relative;
     font-style: italic;
     margin-bottom: 3rem;
+  }
+
+  .temoignages {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1280px;
   }
 </style>
 

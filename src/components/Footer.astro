@@ -3,113 +3,60 @@ import RdvsButtonFooter from "../widgets/RdvsButtonFooter.astro";
 import Righty from "../widgets/Righty.astro";
 import Social from "../components/Social.astro";
 import Wave from "../widgets/Wave.astro";
-import TelephoneSticky from "../widgets/TelephoneSticky.astro"
+import TelephoneSticky from "../widgets/TelephoneSticky.astro";
 ---
 
 <div class="myfooter">
   <div class="wave"><Wave /></div>
-  <div class="containt">
-    <div class="right">
-      <ul>
-        <li>ACCUEIL</li>
-        <li>A PROPOS</li>
-        <li>SÉANCES</li>
-      </ul>
-
-      <ul>
-        <li>TÉMOIGNAGES</li>
-        <li>TARIFS</li>
-        <li>BLOG LETS'S GO</li>
-      </ul>
-      <ul>
-        <li>CONTACT</li>
-      </ul>
-    </div>
-    <div id="contact" class="center"><RdvsButtonFooter /></div>
-    <div class="left">
-      <div style="width:10rem">
-      <TelephoneSticky />
-      </div>
-      <div class="social">
-        <Social />
-      </div>
-      
-      <div class="foliage">
-        <Righty />
-      </div>
-    </div>
+  <div class="left" style="width:100%;margin:0 auto;">
+    <div>LEFT</div>
   </div>
-
-  <style>
-    .myfooter {
-      height: 13rem;
-      background: transparent;
-      color: white;
-      width: 100vw;
-      display: flex;
-      align-items: center;
-      font-family: "Century Gothic";
-      font-size: 15px;
-      font-weight: 200;
-      letter-spacing: 0.07em;
-    }
-
-    .containt {
-      display: flex;
-      width: 99vw;
-      justify-content: space-between;
-    }
-
-    .wave {
-      display: block;
-      height: 13rem;
-      position: absolute;
-      z-index: -1;
-      width: 100vw;
-    }
-
-    .right {
-      display: flex;
-      flex-shrink: 0;
-      width: calc(100vw / 3);
-      justify-content: space-around;
-      gap: -20rem;
-      align-items: center;
-    }
-
-    .left {
-      display: flex;
-      width: calc(100vw / 3);
-      justify-content: flex-end;
-      align-items: center;
-      background-color: red;
-      height:0;
-    }
-
-    .center {
-      width: calc(100vw / 3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .foliage {
-      transform: rotate(190deg) translateY(.5rem) translateX(-2rem) scale(0.87);
-      position: absolute;
-      z-index: -1;
-    }
-
-    .social {
-      position: relative;
-      top: 5rem;
-      right: 3rem;
-    }
-  </style>
-
-  <script>
-    document.getElementById("contact")?.addEventListener("click", (e) => {
-      e.preventDefault();
-      globalThis.sendMail();
-    });
-  </script>
+  <div>
+    <div id="contact" class="center"><RdvsButtonFooter /></div>
+  </div>
+  <div class="right" style="width:100%">
+    <div>RIGHT</div>
+  </div>
 </div>
+
+<style>
+  .myfooter {
+    height: 13rem;
+    display:flex;
+    align-items: center;
+    gap:0
+  }
+
+  .left  {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .right {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .wave {
+    display: block;
+    height: 13rem;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+  }
+
+ 
+  .foliage {
+    transform: rotate(190deg) translateY(0.5rem) translateX(-2rem) scale(0.87);
+    position: absolute;
+    z-index: -1;
+  }
+
+</style>
+
+<script>
+  document.getElementById("contact")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    globalThis.sendMail();
+  });
+</script>
