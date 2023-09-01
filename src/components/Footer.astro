@@ -7,16 +7,16 @@ import TelephoneSticky from "../widgets/TelephoneSticky.astro";
 ---
 
 <div class="myfooter">
-  <div class="wave"><Wave /></div>
-  <div class="left" style="width:100%;margin:0 auto;">
-    <div>LEFT</div>
+  <div style="position:absolute">
+    <TelephoneSticky />
   </div>
+  <div class="wave"><Wave /></div>
+
   <div>
     <div id="contact" class="center"><RdvsButtonFooter /></div>
   </div>
-  <div class="right" style="width:100%">
-    <div>RIGHT</div>
-  </div>
+
+
 </div>
 
 <style>
@@ -24,7 +24,8 @@ import TelephoneSticky from "../widgets/TelephoneSticky.astro";
     height: 13rem;
     display:flex;
     align-items: center;
-    gap:0
+    gap:0;
+    justify-content: space-around;
   }
 
   .left  {

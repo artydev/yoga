@@ -32,11 +32,22 @@ var dev = true;
   </head>
 
   <body>
-    <Navbar />
-    <div style="width:100vw;margin:0 auto;"></div>
-    <slot />
+    <div style="width:100vw;margin:0 auto;max-width: 1280px;">
+       <Navbar></Navbar>
+    </div>
+
+    <div style="max-width: 1280px; margin:0 auto">
+      <slot />
+    </div>
+  
+    
     <Footer />
+
+
     <ModalCertif />
+
+
+
     <a id="mailer"></a>
     {
       ({ dev } && <script is:inline src="/js/dest.js" />) || (
@@ -77,7 +88,7 @@ var dev = true;
           stickyElm.style = `
           position: fixed;
           height: 5rem;
-          top: calc(100vh - 7rem) !important;
+          top: calc(100vh - 6.3rem) !important;
           left: -1.5rem;
           z-index:1000;
         `;
