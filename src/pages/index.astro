@@ -18,7 +18,6 @@ const darblue = "#001A5C";
 <Layout>
   <div style="max-width:100vw;margin:0 auto;overflow:hidden; overflow-y:auto;">
     <section class="hero">
-      <img src="/assets/index/resfinalhero.webp" style="display:none" />
       <Info />
     </section>
 
@@ -228,7 +227,7 @@ const darblue = "#001A5C";
 
   .comment {
     font-size: 1.3rem;
-    font-family: Tenor;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     background: white;
     color: #2c2c5f;
@@ -258,10 +257,12 @@ const darblue = "#001A5C";
     width: 100vw;
     height: 50vh;
     background-position: center center;
+    background-position-y: -5rem;
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 1280px;
-    margin:0 auto;
+    margin: 0 auto;
+    margin-top:0rem;
   }
 
   .titletemoin {
@@ -321,10 +322,13 @@ const darblue = "#001A5C";
     background: white;
     color: #2c2c5f;
     margin-right: 2rem;
+    width:90%;
+  
   }
 
   .comment > p {
     margin-bottom: 0.5rem;
+    
   }
 
   .headcard {
@@ -350,7 +354,7 @@ const darblue = "#001A5C";
 
   .citation {
     font-size: 1.5rem;
-    font-family: Tenor;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: white;
     font-weight: bold;
     color: #2c2c5f;
@@ -368,6 +372,37 @@ const darblue = "#001A5C";
     width: 100%;
     max-width: 1280px;
     margin-bottom: 3rem;
+  }
+
+  .first-content {
+  }
+
+  @media screen and (max-width: 959px) {
+    .first-content {
+      display: block;
+    }
+
+    .first-content  img {
+      width: 50%;
+    }
+
+    .head {
+      text-align: center;
+    }
+
+    p {
+     
+      width: 100%;
+    }
+
+    .comment {
+      margin: 0 auto;
+      max-width: 75%;
+    }
+
+
+
+    
   }
 </style>
 

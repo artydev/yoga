@@ -5,11 +5,18 @@ import TarifComponent from "../components/TarifComponent.astro";
 ---
 
 <Layout>
-  <div class="container mt-16">
+  <div class="container">
     <HeroMassage titre="TARIFS" />
     <TarifComponent />
   </div>
 </Layout>
+
+<style>
+  .container {
+    position:relative;
+    top:-0.5rem;
+  }
+</style>
 
 <script>
   (function styleLink() {

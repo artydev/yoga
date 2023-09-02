@@ -7,7 +7,10 @@ import TelephoneSticky from "../widgets/TelephoneSticky.astro";
 ---
 
 <div class="myfooter">
-  <div style="position:absolute">
+  <div style="position:absolute;right:13rem;">
+    <Social />
+  </div>
+  <div style="position:absolute; bottom:2rem;">
     <TelephoneSticky />
   </div>
   <div class="wave"><Wave /></div>
@@ -15,20 +18,21 @@ import TelephoneSticky from "../widgets/TelephoneSticky.astro";
   <div>
     <div id="contact" class="center"><RdvsButtonFooter /></div>
   </div>
-
-
 </div>
 
 <style>
   .myfooter {
     height: 13rem;
-    display:flex;
+    display: flex;
     align-items: center;
-    gap:0;
+    gap: 0;
+    background-color: transparent;
     justify-content: space-around;
+    position:relative;
+    margin-top: 10rem;
   }
 
-  .left  {
+  .left {
     display: flex;
     justify-content: space-evenly;
   }
@@ -46,13 +50,11 @@ import TelephoneSticky from "../widgets/TelephoneSticky.astro";
     width: 100vw;
   }
 
- 
   .foliage {
     transform: rotate(190deg) translateY(0.5rem) translateX(-2rem) scale(0.87);
     position: absolute;
     z-index: -1;
   }
-
 </style>
 
 <script>

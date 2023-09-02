@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [tailwind(), compress(
     {
 			css: true,
-			html: false,
+			html: true,
 			img: true,
 			js: true,
 			svg: true,

@@ -25,60 +25,82 @@ import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
     font-family: "Segoe UI";
     font-weight: 400;
     font-size: 2rem;
-    background: white;
     max-width: 80%;
     margin: 0 auto;
     position: relative;
-    top: 1rem;
+    top:-0.9rem;
     margin-left: 2rem;
     margin-right: 2rem;
     margin: 0 auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
     color: #2c2c5f;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.85);
-    
+    background: rgba(255, 255, 255, 0.69);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.4px);
     -webkit-backdrop-filter: blur(8.4px);
     z-index: 1;
-
+    height: 72%;
   }
 
   .content {
-    max-width: 60%;
+    max-width: 90%;
     margin: 0 auto;
-    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
     text-align: center;
-    
   }
 
   .title {
     color: #f05907;
-    font-family: "Tenor";
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0 auto;
     font-weight: 600;
     text-align: center;
     font-size: clamp(1rem, 3vw, 1.5rem);
   }
 
-  @media screen and (max-width: 380px) {
-    .infopanel {
-      position: relative;
-      top: 103px;
-      border-radius: 0px;
-      margin: 0;
-      background-color: white;
-      opacity: 0.95;
-      margin: 0 auto;
+
+  @media screen and (max-width: 1024px) {
+
+  }
+
+  @media screen and (max-width: 960px) {
+    .infopanel { 
+      height: 58%;
     }
   }
 
   @media screen and (max-width: 650px) {
     .infopanel {
       margin: 0.2rem;
-      margin-top: 1.5rem;
+    
+      margin: 0 auto;
+      height: 65%;
+      max-width: 90% !important;
+      margin-top: 4.5rem;
     }
   }
+
+  @media screen and (max-width: 390px) {
+    .infopanel {
+      position: relative;
+      border-radius: 0px; 
+      background-color: white;
+      opacity: 0.85;
+      margin: 0 auto;
+      width: 90%;
+      max-width: 99% !important;
+      top:1rem;
+    }
+
+    @media screen and (min-width: 1080px) {
+      .infopanel {
+        top:-0rem;
+      }
+   
+    }
+
+   
+  }
+
 </style>

@@ -2,38 +2,36 @@
 const { titre } = Astro.props;
 ---
 
-<div class="hero" data-titre={titre}>
-
-</div>
-
+<div class="hero" data-titre={titre}></div>
 
 <style>
-    .hero {
-        display:flex;
-        --main-bg-color: white;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        background-image:url("/assets/index/femmetasse.png") ;
-        background-size: cover;
-        background-position: center center ;
-        height: 400px;
-        position: relative;
-        top: -0.2rem;
-    
-    }
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/index/femmetasse.png");
+    width: 100vw;
+    height: 40vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 0rem;
+    position: relative;
+    top: -4rem;
+  }
 </style>
 
 <style>
-    .hero::after {
-        content: attr(data-titre);;
-        color: white;
-        font-size: 48px;
-        filter: brightness(100%);
-        font-family: Tenor;
-        text-shadow: 5px 5px 3px rgba(0,0,0,0.3);
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+  .hero::after {
+    content: attr(data-titre);
+    color: white;
+    font-size: 48px;
+    filter: brightness(100%);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 </style>
-

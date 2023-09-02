@@ -15,9 +15,6 @@ var dev = true;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/globalstyle.css" />
     <GoogleFontsOptimizer
-      url="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap"
-    />
-    <GoogleFontsOptimizer
       url="https://fonts.googleapis.com/css2?family=Allura&display=swap"
     />
     <GoogleFontsOptimizer 
@@ -36,7 +33,7 @@ var dev = true;
        <Navbar></Navbar>
     </div>
 
-    <div style="max-width: 1280px; margin:0 auto">
+    <div style="max-width: 1280px; margin:0 auto;margin-top:10rem;transform:scale(1.05)">
       <slot />
     </div>
   
@@ -88,8 +85,8 @@ var dev = true;
           stickyElm.style = `
           position: fixed;
           height: 5rem;
-          top: calc(100vh - 6.3rem) !important;
-          left: -1.5rem;
+          top: calc(100vh - 7rem) !important;
+          left: -1rem;
           z-index:1000;
         `;
         }, 500);
