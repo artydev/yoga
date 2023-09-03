@@ -15,6 +15,8 @@
       background-repeat: no-repeat;
       background-position: bottom;
       background-size: contain;
+      position: relative;
+      left:1rem;
    }
 
    img {
@@ -23,6 +25,20 @@
     right:30px;
     top: -15px;
    }
+
+  @media screen and (max-width: 1023px) {
+   .backimg {
+      background-image:none;
+   }
+   .block {
+      margin-left: 0 !important;
+   }
+
+   img {
+      max-width: 327px;
+   }
+
+  }
 
  </style>
 

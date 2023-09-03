@@ -41,8 +41,8 @@ var dev = true;
         transform:scale(1.05);
         background:white;
         box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-        ";
-        
+        "
+      ;
     >
       <slot />
     </div>
@@ -59,8 +59,6 @@ var dev = true;
     }
 
     {{ dev } && console.log("IN EV")}
-
-
 
     <script is:inline>
       window.sendMail = function (target = "mailer") {
@@ -81,24 +79,27 @@ var dev = true;
       <div class="elfsight-app-d1095e31-2a31-47b0-9022-67301b69e2cf"></div>
     </div>
 
-    <script>
-      const observer = new IntersectionObserver(([e]) => {}, {
-        threshold: [1],
-      });
+    <script is:inline>
+      const observer = new IntersectionObserver(
+        ([e]) => {
+          alert("ok");
+        },
+        {
+          threshold: [1],
+        }
+      );
 
-      window.onload = function () {
-        setTimeout(() => {
-          const stickyElm = document.querySelector(".kyAUVn");
-          observer.observe(stickyElm);
-          stickyElm.style = `
+      setTimeout(() => {
+        const stickyElm = document.querySelector(".kyAUVn");
+        observer.observe(stickyElm);
+        stickyElm.style = `
           position: fixed;
           height: 5rem;
           top: calc(100vh - 7rem) !important;
           left: -1rem;
           z-index:1000;
         `;
-        }, 500);
-      };
+      }, 1000);
     </script>
   </body>
 </html>

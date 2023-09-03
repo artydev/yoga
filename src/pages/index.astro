@@ -23,7 +23,7 @@ const darblue = "#001A5C";
 
     <section>
       <div class="first-content">
-        <div class=wrapimg>
+        <div class="wrapimg">
           <img
             src="/assets/index/sourire-rounded.png"
             style="max-width:350px;"
@@ -93,10 +93,8 @@ const darblue = "#001A5C";
       </div>
     </section>
 
-    <div
-      style="display:flex; justify-content:space-around; align-items:center;position:relative;top:0px"
-    >
-      <div style="width:50%;background;margin-left:100px;position:relative;">
+    <div class="candlepart">
+      <div class="wrapcomment">
         <div class="comment">
           <p>
             Chaque séance est unique. Je suis à votre écoute et m’adapte à votre
@@ -121,7 +119,7 @@ const darblue = "#001A5C";
           </div>
         </div>
       </div>
-      <div style="margin-left:auto">
+      <div style="max-width:327px">
         <CandleVagueOrange />
       </div>
     </div>
@@ -137,9 +135,8 @@ const darblue = "#001A5C";
     </section>
 
     <section>
-    
-        <SectionCertificats />
-      
+      <SectionCertificats />
+
       <div>
         <ImagesCertificats />
       </div>
@@ -214,8 +211,6 @@ const darblue = "#001A5C";
     overflow-y: auto;
   }
 
-
-
   .second-content {
     display: flex;
     justify-content: space-around;
@@ -289,10 +284,17 @@ const darblue = "#001A5C";
     }
   }
 
+  .candlepart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 0px;
+  }
+
   .pcard {
     text-align: center;
     margin-top: 15px;
-
     font-weight: 400;
   }
 
@@ -309,6 +311,8 @@ const darblue = "#001A5C";
     letter-spacing: 0.2rem;
   }
 
+
+  
   .comment {
     font-size: 1.1rem;
     font-family: "Segoe UI";
@@ -318,6 +322,7 @@ const darblue = "#001A5C";
     margin-right: 2rem;
     width: 90%;
   }
+
 
   .comment > p {
     margin-bottom: 0.5rem;
@@ -366,10 +371,9 @@ const darblue = "#001A5C";
     padding-bottom: 5rem;
   }
 
-
   .first-content {
     width: 100%;
-    margin-top:3rem;
+    margin-top: 3rem;
   }
 
   .first-content img {
@@ -386,31 +390,31 @@ const darblue = "#001A5C";
     color: #2c2c5f;
   }
 
+  .wrapcomment {
+    margin-left:100px;position:relative;width:50%;
+  }
+
   @media screen and (min-width: 1024px) {
     .first-content {
       width: 100%;
       display: flex;
     }
 
-
     .first-content .wrapimg {
-     
       width: 79%;
     }
 
     .first-content img {
       display: flex;
       margin: 0 auto;
-      width:  350px;
+      width: 350px;
       position: relative;
-      left:1rem;
-      top:7rem;
+      left: 1rem;
+      top: 7rem;
     }
 
     .first-content .content {
-      padding-right:2rem;
-      
-     
+      padding-right: 2rem;
     }
   }
 
@@ -423,10 +427,31 @@ const darblue = "#001A5C";
       width: 100%;
     }
 
+   
+  }
+
+  @media screen and (max-width: 1023px) {
+    .candlepart {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .wrapcomment  {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .btnrdv {
+      width: 100;
+      justify-content: space-around;
+    }
+
     .comment {
       margin: 0 auto;
       max-width: 75%;
     }
+  
   }
 </style>
 
