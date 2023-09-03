@@ -21,52 +21,56 @@ const darblue = "#001A5C";
       <Info />
     </section>
 
-    <section class="first-content">
-      <div style="flex:1;">
-        <div
-          style="display:flex;justify-content:space-around;position:relative;top:5rem;"
-        >
-          <img src="/assets/index/francoisejeanblob.png" />
+    <section>
+      <div class="first-content">
+        <div class=wrapimg>
+          <img
+            src="/assets/index/sourire-rounded.png"
+            style="max-width:350px;"
+          />
         </div>
-      </div>
 
-      <div style="flex:1">
-        <div class="comment">
-          <div class="head">POURQUOI PRENDRE RENDEZ-VOUS ?</div>
-          <p>
-            Avez-vous remarqué que malgré notre désir de changement, notre
-            volonté ne suffit pas à nous faire changer durablement ?
-          </p>
-          <p>
-            L’hypnose Ericksonienne (du nom du psychiatre Milton H. Erickson)
-            est une thérapie brève orientée vers la solution. Au bout de
-            quelques séances la personne va se libérer d'un fonctionnement
-            qu'elle n'arrivait pas à modifier de manière consciente, même avec
-            la plus grande des volontés.
-          </p>
-          <p>
-            Chaque séance est unique. Je m’adapte à votre demande. Certains
-            changements prennent plus de temps que d’autres. Et parfois, dès la
-            deuxième séance la magie opère ! Mais d'une manière générale, que ça
-            soit en hypnose ou en soin énergétique, je vous invite à faire au
-            minimum 3 à 5 séances pour vous rendre compte de l’évolution.
-          </p>
-          <p>
-            Je vous accueille au sein d’un cabinet paramédical dans le 20ème à
-            Paris.
-          </p>
-          <p style="margin-top:1rem">
-            L'hypnose thérapeutique vous aide à surmonter de nombreuses
-            problématiques telles que l'anxiété, l'angoisse, les phobies, la
-            dépression, les troubles de la concentration, les compulsions, mais
-            aussi la confiance et l'estime de soi, la difficulté de parler en
-            public, la gestion des émotions. Dans tous les cas, je vous invite à
-            me contacter avant la prise de rendez-vous pour déterminer vos
-            besoins et optimiser votre séance.
-          </p>
-        </div>
-        <div style="width:150px;margin-top:6rem;">
-          <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
+        <div style="width:80%;margin:0 auto">
+          <div class="content">
+            <div class="head" style='text-align:center;width:100%"'>
+              POURQUOI PRENDRE RENDEZ-VOUS ?
+            </div>
+            <p>
+              Avez-vous remarqué que malgré notre désir de changement, notre
+              volonté ne suffit pas à nous faire changer durablement ?
+            </p>
+            <p>
+              L’hypnose Ericksonienne (du nom du psychiatre Milton H. Erickson)
+              est une thérapie brève orientée vers la solution. Au bout de
+              quelques séances la personne va se libérer d'un fonctionnement
+              qu'elle n'arrivait pas à modifier de manière consciente, même avec
+              la plus grande des volontés.
+            </p>
+            <p>
+              Chaque séance est unique. Je m’adapte à votre demande. Certains
+              changements prennent plus de temps que d’autres. Et parfois, dès
+              la deuxième séance la magie opère ! Mais d'une manière générale,
+              que ça soit en hypnose ou en soin énergétique, je vous invite à
+              faire au minimum 3 à 5 séances pour vous rendre compte de
+              l’évolution.
+            </p>
+            <p>
+              Je vous accueille au sein d’un cabinet paramédical dans le 20ème à
+              Paris.
+            </p>
+            <p style="margin-top:1rem">
+              L'hypnose thérapeutique vous aide à surmonter de nombreuses
+              problématiques telles que l'anxiété, l'angoisse, les phobies, la
+              dépression, les troubles de la concentration, les compulsions,
+              mais aussi la confiance et l'estime de soi, la difficulté de
+              parler en public, la gestion des émotions. Dans tous les cas, je
+              vous invite à me contacter avant la prise de rendez-vous pour
+              déterminer vos besoins et optimiser votre séance.
+            </p>
+          </div>
+          <div>
+            <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
+          </div>
         </div>
       </div>
     </section>
@@ -210,11 +214,7 @@ const darblue = "#001A5C";
     overflow-y: auto;
   }
 
-  .first-content {
-    display: flex;
-    justify-content: space-around;
-    gap: 1rem;
-  }
+
 
   .second-content {
     display: flex;
@@ -227,18 +227,12 @@ const darblue = "#001A5C";
 
   .comment {
     font-size: 1.3rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: white;
     color: #2c2c5f;
     margin-right: 2rem;
     position: relative;
     top: 3rem;
-  }
-
-  .comment > p {
-    max-width: 720px;
-    margin-bottom: 1rem;
   }
 
   .head {
@@ -262,7 +256,7 @@ const darblue = "#001A5C";
     background-size: cover;
     max-width: 1280px;
     margin: 0 auto;
-    margin-top:0rem;
+    margin-top: 0rem;
   }
 
   .titletemoin {
@@ -322,13 +316,11 @@ const darblue = "#001A5C";
     background: white;
     color: #2c2c5f;
     margin-right: 2rem;
-    width:90%;
-  
+    width: 90%;
   }
 
   .comment > p {
     margin-bottom: 0.5rem;
-    
   }
 
   .headcard {
@@ -354,7 +346,7 @@ const darblue = "#001A5C";
 
   .citation {
     font-size: 1.5rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: white;
     font-weight: bold;
     color: #2c2c5f;
@@ -374,24 +366,60 @@ const darblue = "#001A5C";
     margin-bottom: 3rem;
   }
 
+
   .first-content {
+    width: 100%;
+    margin-top:3rem;
+  }
+
+  .first-content img {
+    display: flex;
+    margin: 0 auto;
+    width: 300px;
+  }
+
+  .first-content .content {
+    font-size: 1.1rem;
+    font-family: "Segoe UI";
+    font-weight: 400;
+    background: white;
+    color: #2c2c5f;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .first-content {
+      width: 100%;
+      display: flex;
+    }
+
+
+    .first-content .wrapimg {
+     
+      width: 79%;
+    }
+
+    .first-content img {
+      display: flex;
+      margin: 0 auto;
+      width:  350px;
+      position: relative;
+      left:1rem;
+      top:7rem;
+    }
+
+    .first-content .content {
+      padding-right:2rem;
+      
+     
+    }
   }
 
   @media screen and (max-width: 959px) {
-    .first-content {
-      display: block;
-    }
-
-    .first-content  img {
-      width: 50%;
-    }
-
     .head {
       text-align: center;
     }
 
     p {
-     
       width: 100%;
     }
 
@@ -399,10 +427,6 @@ const darblue = "#001A5C";
       margin: 0 auto;
       max-width: 75%;
     }
-
-
-
-    
   }
 </style>
 

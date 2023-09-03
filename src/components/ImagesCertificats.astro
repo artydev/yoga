@@ -109,21 +109,27 @@
 
 <script>
   import Swipe from "swipejs";
-  window["swipe"] = new Swipe(
-    document.getElementById("slider") as HTMLElement,
-    {
-      startSlide: 0,
-      speed: 400,
-      draggable: true,
-      auto: 1000,
-      continuous: true,
-      disableScroll: false,
-      stopPropagation: false,
-      ignore: ".scroller",
-      callback: function (index, elem, dir) {},
-      transitionEnd: function (index, elem) {},
-    }
-  );
+
+  function startSlide() {
+    window["swipe"] = new Swipe(
+      document.getElementById("slider") as HTMLElement,
+      {
+        startSlide: 0,
+        speed: 400,
+        draggable: true,
+        auto: 1000,
+        continuous: true,
+        disableScroll: false,
+        stopPropagation: false,
+        ignore: ".scroller",
+        callback: function (index, elem, dir) {},
+        transitionEnd: function (index, elem) {},
+      }
+    );
+  }
+  window.onload =  function () { 
+    startSlide();
+  } 
 </script>
 
 <script>
