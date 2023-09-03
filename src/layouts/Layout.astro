@@ -17,7 +17,7 @@ var dev = true;
     <GoogleFontsOptimizer
       url="https://fonts.googleapis.com/css2?family=Allura&display=swap"
     />
-    <GoogleFontsOptimizer 
+    <GoogleFontsOptimizer
       url="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap"
     />
     <script
@@ -30,20 +30,26 @@ var dev = true;
 
   <body>
     <div style="width:100vw;margin:0 auto;max-width: 1280px;">
-       <Navbar></Navbar>
+      <Navbar />
     </div>
 
-    <div style="max-width: 1280px; margin:0 auto;margin-top:10rem;transform:scale(1.05)">
+    <div
+      style="
+        max-width: 1280px; 
+        margin:0 auto;
+        margin-top:10rem;
+        transform:scale(1.05);
+        background:white;
+        box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+        ";
+        
+    >
       <slot />
     </div>
-  
-    
+
     <Footer />
 
-
     <ModalCertif />
-
-
 
     <a id="mailer"></a>
     {
@@ -53,6 +59,8 @@ var dev = true;
     }
 
     {{ dev } && console.log("IN EV")}
+
+
 
     <script is:inline>
       window.sendMail = function (target = "mailer") {
