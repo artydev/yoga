@@ -6,6 +6,5 @@ body {
 @media(max-width:960px) {
     .footer {
       display: none;
-      
     }
   }

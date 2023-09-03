@@ -1,21 +1,15 @@
-<div class="sectionsertificats"></div>
 
-<!-- 
-<script>
-    import "../js/certificats.js"
-</script>
--->
 
 <div class="containercertif">
-  <div style="flex:1;display:flex;justify-content:space-around;position:relative;top:5rem">
+  <div style="flex:1;display:flex;justify-content:space-around;margin-top:2rem;">
     <img src="/assets/index/skyseeing-circle.png" />
   </div>
-  <div style="flex:1;padding-left:3rem;height:300px">
+  <div style="flex:1;" class="infocertif">
     <div>
       <h1 class="titlecertif">CERTIFICATS</h1>
       <div class="handwriting">Francoise Lefeuvre</div>
     </div>
-    <div>
+    <div style="margin-right:3rem;">
       <p class="comment">
         Françoise Lefeuvre est Adhérente au Syndicat SNPER (Syndicat National
         des Praticiens et Enseignants REIKI) et au SDMH (syndicat des métiers de
@@ -25,7 +19,7 @@
       <p class="comment">
         Pour accéder aux codes de déontologie cliquez ici :</p>
       <br />
-      <div style="display:flex;align-items:center;gap:2rem;">
+      <div style="display:flex;align-items:center;justify-content:space-around">
         <img src="/assets/index/logosyndicat.png" />
         <img
           src="/assets/index/logosyndicat-round.jpg"
@@ -39,12 +33,12 @@
 <style>
   .containercertif {
     position: relative;
-    top: 4rem;
     height: 200px;
     display: flex;
-    margin-bottom: 3rem;
     justify-content: space-around;
     align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
   }
   .containercertif img {
     width: 20rem;
@@ -76,5 +70,25 @@
     font-size: 1.1rem;
     font-family: "Segoe UI";
     font-weight: 400;
+  }
+
+  .infocertif  {
+   
+  }
+  @media screen and (max-width: 1023px) {
+    .containercertif {
+      flex-direction: column;
+      margin-top:18rem;
+      margin-bottom: 18rem;
+    }
+
+    .infocertif {
+      
+      max-width: 70%;
+      margin: 0 auto;
+      
+      text-align: center;
+      padding-left:0rem !important;
+    }
   }
 </style>
