@@ -8,7 +8,6 @@ import LeftBlueFoliage from "../widgets/LeftBlueFoliage.astro";
 import CandleVagueOrange from "../widgets/CandleVagueOrange.astro";
 import SectionCertificats from "../components/SectionCertificats.astro";
 import ImagesCertificats from "../components/ImagesCertificats.astro";
-import TemoignagesComponent from "../components/TemoignageAccueil.astro";
 import Temoignage from "../components/Temoignage.astro";
 import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
 
@@ -368,7 +367,6 @@ const darblue = "#001A5C";
     margin: 0 auto;
     width: 100%;
     max-width: 1280px;
-    padding-bottom: 5rem;
   }
 
   .first-content {
@@ -393,6 +391,14 @@ const darblue = "#001A5C";
   .wrapcomment {
     margin-left:100px;position:relative;width:50%;
   }
+
+  @media screen and (max-width: 719px) {
+    .temoignages {
+      margin-bottom: 10.5rem;
+    }
+  }
+
+  
 
   @media screen and (min-width: 1024px) {
     .first-content {

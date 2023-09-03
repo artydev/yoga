@@ -82,7 +82,7 @@ var dev = true;
     <script is:inline>
       const observer = new IntersectionObserver(
         ([e]) => {
-         
+       
         },
         {
           threshold: [1],
@@ -91,15 +91,21 @@ var dev = true;
 
       setTimeout(() => {
         const stickyElm = document.querySelector(".kyAUVn");
+        const svggoog = document.querySelector(".es-badge-sources-container")
         observer.observe(stickyElm);
+        svggoog.style.display = "none";
         stickyElm.style = `
           position: fixed;
-          height: 5rem;
-          top: calc(100vh - 7rem) !important;
-          left: -1rem;
+          height: 3.5rem;
+          top: calc(100vh - 4.9rem) !important;
+          left: -0.5rem;
           z-index:1000;
         `;
-      }, 1000);
+      }, 5000);
+    </script>
+
+    <script is:inline>
+       
     </script>
   </body>
 </html>

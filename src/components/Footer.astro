@@ -4,7 +4,6 @@ import Righty from "../widgets/Righty.astro";
 import Social from "../components/Social.astro";
 import Wave from "../widgets/Wave.astro";
 import TelephoneSticky from "../widgets/TelephoneSticky.astro";
-import Rdvsbutton from "../widgets/RdvsButton.astro";
 ---
 
 <div class="myfooter">
@@ -22,7 +21,7 @@ import Rdvsbutton from "../widgets/RdvsButton.astro";
         <RdvsButtonFooter />
       </div>
 
-      <div>
+      <div class="links">
         <a>ACCUEIL</a>
         <a>À PROPOS</a>
         <a>SÉANCES</a>
@@ -36,9 +35,15 @@ import Rdvsbutton from "../widgets/RdvsButton.astro";
     .navfooter {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: white;
+      position: relative;
+      top:-1rem;
+    }
+    .links {
+      margin-top:0.5rem;
+      font-size:0.95rem;
     }
     .myfooter {
-      height: 13rem;
+      height: 16rem;
       display: flex;
       align-items: center;
       gap: 0;
@@ -60,7 +65,7 @@ import Rdvsbutton from "../widgets/RdvsButton.astro";
 
     .wave {
       display: block;
-      height: 13rem;
+      height: 16rem;
       position: absolute;
       z-index: -1;
       width: 100vw;
