@@ -14,7 +14,6 @@ import TelephoneSticky from "../widgets/TelephoneSticky.astro";
     <TelephoneSticky />
   </div>
   <div class="wave"><Wave /></div>
-
   <div>
     <div class="center navfooter">
       <div id="contact">
@@ -37,10 +36,11 @@ import TelephoneSticky from "../widgets/TelephoneSticky.astro";
       color: white;
       position: relative;
       top:-1rem;
+      font-size:0.90rem;
     }
     .links {
       margin-top:0.5rem;
-      font-size:0.95rem;
+      
     }
     .myfooter {
       height: 16rem;
@@ -75,6 +75,19 @@ import TelephoneSticky from "../widgets/TelephoneSticky.astro";
       transform: rotate(190deg) translateY(0.5rem) translateX(-2rem) scale(0.87);
       position: absolute;
       z-index: -1;
+    }
+
+    @media screen and (max-width: 500px) {
+      .wave {
+        display: none;
+      }
+      .myfooter {
+        background-color:#001A5B;
+        margin-top:0;
+      }
+      .navfooter {
+        top:-4.5rem;
+      }
     }
   </style>
 
