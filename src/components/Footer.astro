@@ -4,6 +4,7 @@ import Righty from "../widgets/Righty.astro";
 import Social from "../components/Social.astro";
 import Wave from "../widgets/Wave.astro";
 import TelephoneSticky from "../widgets/TelephoneSticky.astro";
+import Rdvsbutton from "../widgets/RdvsButton.astro";
 ---
 
 <div class="myfooter">
@@ -16,50 +17,66 @@ import TelephoneSticky from "../widgets/TelephoneSticky.astro";
   <div class="wave"><Wave /></div>
 
   <div>
-    <div id="contact" class="center"><RdvsButtonFooter /></div>
+    <div class="center navfooter">
+      <div id="contact">
+        <RdvsButtonFooter />
+      </div>
+
+      <div>
+        <a>ACCUEIL</a>
+        <a>À PROPOS</a>
+        <a>SÉANCES</a>
+        <a>TARIFS</a>
+        <a>CONTACTS</a>
+      </div>
+    </div>
   </div>
+
+  <style>
+    .navfooter {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+    }
+    .myfooter {
+      height: 13rem;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      background-color: transparent;
+      justify-content: space-around;
+      position: relative;
+      margin-top: 10rem;
+    }
+
+    .left {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .right {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .wave {
+      display: block;
+      height: 13rem;
+      position: absolute;
+      z-index: -1;
+      width: 100vw;
+    }
+
+    .foliage {
+      transform: rotate(190deg) translateY(0.5rem) translateX(-2rem) scale(0.87);
+      position: absolute;
+      z-index: -1;
+    }
+  </style>
+
+  <script>
+    document.getElementById("contact")?.addEventListener("click", (e) => {
+      e.preventDefault();
+      globalThis.sendMail();
+    });
+  </script>
 </div>
-
-<style>
-  .myfooter {
-    height: 13rem;
-    display: flex;
-    align-items: center;
-    gap: 0;
-    background-color: transparent;
-    justify-content: space-around;
-    position:relative;
-    margin-top: 10rem;
-  }
-
-  .left {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .right {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  .wave {
-    display: block;
-    height: 13rem;
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
-  }
-
-  .foliage {
-    transform: rotate(190deg) translateY(0.5rem) translateX(-2rem) scale(0.87);
-    position: absolute;
-    z-index: -1;
-  }
-</style>
-
-<script>
-  document.getElementById("contact")?.addEventListener("click", (e) => {
-    e.preventDefault();
-    globalThis.sendMail();
-  });
-</script>
