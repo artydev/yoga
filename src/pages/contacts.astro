@@ -7,12 +7,39 @@ import HeroMassage from "../components/HeroOther.astro";
    <div class="container">
       <HeroMassage titre="CONTACTS"></HeroMassage>
    </div>
+
+   <div class="main">
+    <div flex:0.5>
+      <div>
+        <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=2.39852249622345%2C48.85693817263442%2C2.400898933410645%2C48.85803759133688&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=19/48.85749/2.39971"></a></small>
+      </div>
+    </div>
+    <div flex:0.5>
+      <div>Francoise Lefeuvre</div>
+      <div>Cabinet paramédical au 6 rue de Fontarabie 75020 </div>
+      <div>tél :06 85 53 82 73</div>
+      <div>Siret 795 241 546 00014</div>
+    </div>
+
+   </div>
 </Layout>
 
 <style>
   .container {
     position: relative;
     top:-1.5rem;
+  }
+
+  .main {
+    font-size: 1.3rem;
+    display:flex;
+    justify-content:center;
+    gap:3rem;
+    align-items: center;
+    padding-bottom: 3rem;
+    padding-left:3rem;
+    padding-right:3rem;
+   
   }
 </style>
 

@@ -9,7 +9,7 @@ import CandleVagueOrange from "../widgets/CandleVagueOrange.astro";
 import SectionCertificats from "../components/SectionCertificats.astro";
 import ImagesCertificats from "../components/ImagesCertificats.astro";
 import Temoignage from "../components/Temoignage.astro";
-import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
+import ContactezMoi from "../widgets/ContactezMoi.astro"
 
 const darblue = "#001A5C";
 ---
@@ -67,7 +67,7 @@ const darblue = "#001A5C";
               déterminer vos besoins et optimiser votre séance.
             </p>
           </div>
-          <div>
+          <div id="contactrdvs">
             <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
           </div>
         </div>
@@ -263,26 +263,6 @@ const darblue = "#001A5C";
     color: #2c2c5f;
   }
 
-  @media screen and (max-width: 960px) {
-    .hero {
-      height: 60vh;
-    }
-  }
-
-  @media screen and (max-width: 650px) {
-    .hero {
-      height: 50vh;
-      background-position: center center;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    .hero {
-      height: 40vh;
-      background-position: center center;
-    }
-  }
-
   .candlepart {
     display: flex;
     justify-content: space-around;
@@ -310,8 +290,6 @@ const darblue = "#001A5C";
     letter-spacing: 0.2rem;
   }
 
-
-  
   .comment {
     font-size: 1.1rem;
     font-family: "Segoe UI";
@@ -321,7 +299,6 @@ const darblue = "#001A5C";
     margin-right: 2rem;
     width: 90%;
   }
-
 
   .comment > p {
     margin-bottom: 0.5rem;
@@ -389,16 +366,19 @@ const darblue = "#001A5C";
   }
 
   .wrapcomment {
-    margin-left:100px;position:relative;width:50%;
+    margin-left: 100px;
+    position: relative;
+    width: 50%;
   }
 
-  @media screen and (max-width: 719px) {
+  @media screen and (max-width: 720px) {
     .temoignages {
       margin-bottom: 10.5rem;
     }
+    .hero {
+      height: 60vh;
+    }
   }
-
-  
 
   @media screen and (min-width: 1024px) {
     .first-content {
@@ -432,18 +412,16 @@ const darblue = "#001A5C";
     p {
       width: 100%;
     }
-
-   
   }
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1024px) {
     .candlepart {
       flex-direction: column-reverse;
       align-items: center;
       justify-content: space-around;
     }
 
-    .wrapcomment  {
+    .wrapcomment {
       width: 100%;
       margin-left: 0;
     }
@@ -457,7 +435,6 @@ const darblue = "#001A5C";
       margin: 0 auto;
       max-width: 75%;
     }
-  
   }
 </style>
 
@@ -486,4 +463,12 @@ const darblue = "#001A5C";
       foliage.style.top = "100px";
     }
   })();
+</script>
+
+
+<script>
+  document.getElementById("contactrdvs")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    globalThis.sendMail();
+  });
 </script>

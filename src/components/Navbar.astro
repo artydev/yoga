@@ -15,23 +15,16 @@ import Telephone from "../widgets/Telephone.astro";
             <li>
                 <a data-name="seances" href="/seances">SÉANCES</a>  
             </li>    
-           <!--  <li>
-                <a data-name="temoignages" href="/temoignages">TÉMOIGNAGES</a>  -->
-            </li>      
             <li>
                 <a data-name="tarifs" href="/tarifs">TARIFS</a> 
             </li>   
-           <!-- <li>
-                <a data-name="letsgo" href="/letsgo">BLOG LET'S GO</a> 
-            </li> -->
-
             <li>
                 <a data-name="contacts" href="/contacts">CONTACTS</a> 
             </li>
             <li>
                <Telephone />
             </li>
-            <li>
+            <li class="rdvs">
                 <RdvsButton></RdvsButton>
             </li>    
                                                           
@@ -64,6 +57,10 @@ import Telephone from "../widgets/Telephone.astro";
         text-underline-offset: 5px;
         text-decoration-thickness: 0.2rem; 
         user-select: none;
+    }
+
+    .rdvs:hover {
+        text-decoration: transparent;
     }
  
     #togglemenu {

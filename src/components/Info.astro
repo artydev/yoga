@@ -15,7 +15,7 @@ import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
     <br />
     Je suis également énergéticienne.
   </p>
-  <div style="font-style:normal">
+  <div style="font-style:normal" id="contactInfo">
     <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
   </div>
 </div>
@@ -28,7 +28,7 @@ import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
     max-width: 80%;
     margin: 0 auto;
     position: relative;
-    top:-0.9rem;
+    top: -0.9rem;
     margin-left: 2rem;
     margin-right: 2rem;
     margin: 0 auto;
@@ -40,7 +40,7 @@ import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
     backdrop-filter: blur(8.4px);
     -webkit-backdrop-filter: blur(8.4px);
     z-index: 1;
-    height: 72%;
+   
   }
 
   .content {
@@ -59,48 +59,42 @@ import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
     font-size: clamp(1rem, 3vw, 1.5rem);
   }
 
-
-  @media screen and (max-width: 1024px) {
-
-  }
-
-  @media screen and (max-width: 960px) {
-    .infopanel { 
-      height: 58%;
-    }
-  }
-
-  @media screen and (max-width: 650px) {
-    .infopanel {
-      margin: 0.2rem;
-    
-      margin: 0 auto;
-      height: 65%;
-      max-width: 90% !important;
-      margin-top: 4.5rem;
-    }
-  }
-
-  @media screen and (max-width: 390px) {
+  @media (width <= 390px) {
     .infopanel {
       position: relative;
-      border-radius: 0px; 
+      border-radius: 0px;
       background-color: white;
-      opacity: 0.85;
+      opacity: 0.9;
+      height:50%;
       margin: 0 auto;
       width: 90%;
       max-width: 99% !important;
-      top:1rem;
+      top:-1rem;
+      height:70%;
     }
+  }
 
-    @media screen and (min-width: 1080px) {
-      .infopanel {
-        top:-0rem;
-      }
-   
+  @media (width > 390px  width <= 700px) {
+    .infopanel {
+      position: relative;
+      border-radius: 0px;
+      opacity: 0.9;
+      height:50%;
+      margin: 0 auto;
+      width: 90%;
+      max-width: 99% !important;
+      top:-0.9rem;
+      height:65%;
+      color: red;
     }
-
-   
+    
   }
 
 </style>
+
+<script>
+  document.getElementById("contactInfo")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    globalThis.sendMail();
+  });
+</script>
