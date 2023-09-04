@@ -33,23 +33,34 @@ var dev = true;
       <Navbar />
     </div>
 
-    <div
-      style="
-        max-width: 1280px; 
-        margin:0 auto;
-        margin-top:10rem;
-        transform:scale(1.05);
-        background:white;
-        box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-        "
-      ;
-    >
+    <div class="maincontent">
       <slot />
     </div>
 
     <Footer />
 
     <ModalCertif />
+
+
+   <style>
+    .maincontent {
+      max-width: 1280px; 
+        margin:0 auto;
+        margin-top:10rem;
+        transform:scale(1.05);
+        background:white;
+        box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    }
+
+
+    @media only screen and (max-width: 430px) {
+      .maincontent {
+        margin-top:0rem;
+        transform:scale(1.0);
+      }
+    }
+   </style>
+
 
     <a id="mailer"></a>
     {
@@ -92,20 +103,18 @@ var dev = true;
       setTimeout(() => {
         const stickyElm = document.querySelector(".kyAUVn");
         const svggoog = document.querySelector(".es-badge-sources-container")
+        const reviews = document.querySelector(".es-badge-total-reviews");
         observer.observe(stickyElm);
         svggoog.style.display = "none";
+        reviews.style.display = "none";
         stickyElm.style = `
           position: fixed;
-          height: 3.1rem;
-         
-          left: -0.5rem;
+          height: 2.5rem;
+          bottom: -0.6rem;
+          left: -0.99rem;
           z-index:1000;
         `;
       }, 5000);
-    </script>
-
-    <script is:inline>
-       
     </script>
   </body>
 </html>

@@ -74,13 +74,13 @@ const darblue = "#001A5C";
       </div>
     </section>
 
-    <RightOrangeFoliage />
+    <div class="foliage">
+      <RightOrangeFoliage />
+    </div>
+  
 
     <!--  Two Cards -->
-    <section
-      class="ml-1 mr-1"
-      style="display:flex; justify-content: space-around; gap:5px;margin-bottom:2rem;"
-    >
+    <section class="ml-1 mr-1 twocards">
       <div>
         <div class="headcard">Séance d'hypnose</div>
         <Card color="#001A5C" url="/assets/index/mains.png" />
@@ -118,13 +118,15 @@ const darblue = "#001A5C";
           </div>
         </div>
       </div>
-      <div style="max-width:327px">
+      <div style="max-width:327px" class="candle">
         <CandleVagueOrange />
       </div>
     </div>
 
     <section>
-      <LeftBlueFoliage />
+      <div class="foliage"> 
+        <LeftBlueFoliage /> 
+      </div>
       <div style="text-align:center">
         <p class="citation">
           “Je ne suis pas ce qui m’est arrivé. Je suis ce que j’ai décidé
@@ -142,7 +144,7 @@ const darblue = "#001A5C";
     </section>
   </div>
 
-  <section>
+  <section class="wraptemoignages">
     <h1 class="titletemoin">TÉMOIGNAGES</h1>
     <div class="temoignages">
       <Temoignage name="Hélène" titre="UN GRAND BIEN-ÊTRE">
@@ -304,6 +306,10 @@ const darblue = "#001A5C";
     margin-bottom: 0.5rem;
   }
 
+  .twocards {
+    display:flex; justify-content: space-around; gap:5px;margin-bottom:2rem;
+  }
+
   .headcard {
     text-align: center;
     font-weight: 400;
@@ -370,6 +376,53 @@ const darblue = "#001A5C";
     position: relative;
     width: 50%;
   }
+
+ @media screen and (width <= 430px) {
+    .hero {
+      background-image: none;
+      height: 0vh !important; 
+      margin-top: 15rem;
+      margin-bottom:10rem;
+    }
+    .head {
+     
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .headcard {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: normal;
+      font-size: 1.2rem;
+      position: relative;
+      top:1.2rem;
+    }
+
+    .twocards {
+      margin-bottom:0;
+    }
+
+    .candle {
+  
+      position: relative;
+      right:1.8rem;
+    }
+    .foliage {
+      display: none;
+    }
+
+    .citation {
+      font-size: 1.2rem;
+      padding:2rem;
+      font-weight: 400;
+    }
+
+    .wraptemoignages {
+      position: relative;
+      top:-10rem;
+    }
+  
+ }
 
   @media screen and (max-width: 720px) {
     .temoignages {

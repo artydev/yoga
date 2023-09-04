@@ -66,6 +66,7 @@
     cursor: pointer;
     position: relative;
     top: 1.6rem;
+    right:0.5rem;
   }
 
   #slider img {
@@ -105,6 +106,12 @@
     transform: rotate(135deg) scale(2);
     -webkit-transform: rotate(135deg) scale(2);
   }
+
+  @media screen and (width <= 430px) {
+    .arrow {
+      display: none;
+    }
+  }
 </style>
 
 <script>
@@ -127,9 +134,9 @@
       }
     );
   }
-  window.onload =  function () { 
+
     startSlide();
-  } 
+   
 </script>
 
 <script>
