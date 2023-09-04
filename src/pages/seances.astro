@@ -7,17 +7,17 @@ import LeftAndRightFoliage from "../widgets/LeftAndRightFoliage.astro";
 ---
 
 <Layout>
-  <div class="container mt-16">
+  <div class="mt-16" style="height:18rem">
     <HeroMassage titre="SÉANCES" />
   </div>
 
-  <section class="first-content">
-    <div style="margin-top:3rem;">
-      <img src="/assets/index/imposemainsfreeze.png" width="100%" />
+  <div class="first-content">
+    <div class="wrapimage">
+      <img src="/assets/index/imposemainsfreeze.png" />
     </div>
-    <div>
+    <div class="wrapcomment">
+      <div class="titre">SÉANCE D'HYPNOSE</div>
       <div class="comment">
-        <div class="head">SÉANCE D'HYPNOSE</div>
         <p>
           Saviez-vous qu’en hypnose Ericksonienne nous pensons que nous avons
           toutes les ressources en nous pour évoluer et mettre en place les
@@ -32,122 +32,162 @@ import LeftAndRightFoliage from "../widgets/LeftAndRightFoliage.astro";
         <p>
           Il n'est pas nécessaire d'entrer dans une transe très profonde pour
           accéder à vos ressources inconscientes, parfois un simple état proche
-          de la rêverie suffit.
-        </p>
-        <p>
-          Quoiqu’il en soit, vous gardez le contrôle pendant toute la séance. Je
-          vous accompagne mais c’est vous qui faite la séance.
+          de la rêverie suffit. Quoiqu’il en soit, vous gardez le contrôle
+          pendant toute la séance. Je vous accompagne mais c’est vous qui faite
+          la séance.
         </p>
       </div>
-      <div style="width:150px;margin-top:6rem;">
+      <div class="contactezmoi">
         <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
       </div>
     </div>
-  </section>
-  <RightOrangeFoliage />
-  <section class="second-content">
-    <div>
+  </div>
+  <div
+    style="transform:scale(0.76);position:relative;right:1rem;"
+    class="foliage"
+  >
+    <LeftAndRightFoliage />
+  </div>
+
+  <div class="second-content">
+    <div class="wrapimage">
+      <img src="/assets/index/maincoeurblob.png" />
+    </div>
+    <div class="wrapcomment">
+      <div class="titre">SÉANCE SOIN ÉNERGÉTIQUES</div>
       <div class="comment">
-        <div class="head">SÉANCE SOIN ÉNERGÉTIQUES</div>
         <p>
-          En agissant sur l'harmonisation de nos énergies, nous améliorons notre
-          état d'être. Ici, vous n’avez rien à faire, qu’à ressentir.
+          En agissant sur l'harmonisation de nos énergies, nous améliorons notre état d'être. Ici, vous n’avez rien à faire, qu’à ressentir.
         </p>
         <p>
-          En cabinet, vous êtes habillé sur la table de massage et, en me
-          reliant à un autre état de conscience, je place mes mains sur le corps
-          (ou au-dessus) avec l'intention d'harmoniser les corps subtils et les
-          chakras. Dès la première séance, la personne ressent une grande
-          détente physique, les douleurs disparaissent et l'esprit s'apaise. Et
-          ce bien être s'installe durablement au fur et à mesure des séances.
+          En cabinet, vous êtes habillé sur la table de massage et, en me reliant à un autre état de conscience, je place mes mains sur le corps (ou au-dessus) avec l'intention d'harmoniser les corps subtils et les chakras. Dès la première séance, la personne ressent une grande détente physique, les douleurs disparaissent et l'esprit s'apaise. Et ce bien être s'installe durablement au fur et à mesure des séances.
         </p>
       </div>
-      <div style="width:150px;margin-top:6rem;">
+      <div class="contactezmoi" style="height:5rem;margin:bottom:3rem">
         <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
       </div>
     </div>
-    <div style="margin-top:3rem">
-      <img src="/assets/index/maincoeurblob.png" class="width:100%" />
-    </div>
-  </section>
-  <section>
-    <div style="text-align:center">
-      <LeftAndRightFoliage />
-      <p class="citation">
-        “Je ne suis pas ce qui m’est arrivé. Je suis ce que j’ai décidé d’être.”
-        C.G. JUNG
-      </p>
-    </div>
-  </section>
-</Layout>
-<style>
-  .first-content {
-    display: flex;
-    justify-content: space-around;
-    gap: 1rem;
-  }
+  </div>
 
-  .second-content {
-    display: flex;
-    justify-content: space-around;
-  }
+  <style>
+    p {
+      text-align: justify;
+      word-spacing: -2px;
+    }
 
-  img {
-    transform: scale(0.89);
-  }
+    .wrapimage {
+      max-width: 320px;
+    }
 
-  .comment {
-    font-size: 1.1rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 400;
-    background: white;
-    color: #2c2c5f;
-    margin-right: 2rem;
-    position: relative;
-    top: 3rem;
-  }
+    .titre {
+      font-family: Segoe UI;
+      font-style: normal;
+      margin-top: 2rem;
+      font-size: 24px;
+      letter-spacing: 0.1rem;
+      text-align: center;
+    }
 
-  .comment > p {
-    max-width: 720px;
-    margin-bottom: 1rem;
-  }
+    .comment {
+      position: relative;
+    }
 
-  .head {
-    font-family: "Segoe UI";
-    font-style: normal;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-size: 24px;
-    letter-spacing: 0.2rem;
-  }
+    .comment > p {
+      font-size: 1.1rem;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: white;
+      font-weight: 400;
+      color: #2c2c5f;
+      margin-bottom: 1rem;
+      text-align: justify;
+      word-spacing: -2px;
+    }
 
-  .backimg {
-    background-image: url("/assets/index/orangeblob.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
-  }
+    .contactezmoi {
+      margin-top: 3rem;
+    }
 
-  .citation {
-    font-size: 1.5rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: white;
-    font-weight: 400;
-    color: #2c2c5f;
-    position: relative;
-    font-style: italic;
-    top:-6rem;
-    background:transparent
+    @media screen and (width <= 640px) and (width < 1080px) {
+      .first-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .comment {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        width: 95vw;
+      }
+      .second-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+      }
+    }
 
-  }
-</style>
+    @media screen and (width > 640px) and (width <= 1080px) {
+      .comment {
+        padding: 2rem;
+        width: 90%;
+        margin: auto;
+      }
 
-<script>
-  (function styleLink() {
-    let link = document.querySelector("[data-name='seances']") as HTMLElement;
-    link.setAttribute(
-      "style",
-      `
+      .first-content .wrapimage {
+        padding: 0rem;
+        max-width: 320px;
+        margin: 0 auto;
+        margin-top: 2rem;
+      }
+
+      .second-content .wrapimage {
+        padding: 0rem;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+    }
+
+    @media screen and (width > 1080px) {
+      .first-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .first-content .wrapimage {
+        flex-shrink: 0;
+        flex: 0.5;
+      }
+
+      .first-content .wrapcomment {
+        flex-shrink: 0;
+        flex: 0.5;
+      }
+
+      .second-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .second-content .wrapimage {
+        flex-shrink: 0;
+        flex: 0.5;
+      }
+
+      .second-content .wrapcomment {
+        flex-shrink: 0;
+        flex: 0.5;
+      }
+    }
+  </style>
+
+  <script>
+    (function styleLink() {
+      let link = document.querySelector("[data-name='seances']") as HTMLElement;
+      link.setAttribute(
+        "style",
+        `
          text-decoration: orangered;
          cursor: pointer;
          color:black;
@@ -155,6 +195,7 @@ import LeftAndRightFoliage from "../widgets/LeftAndRightFoliage.astro";
          text-underline-offset: 5px;
          text-decoration-thickness: 0.2rem; 
          user-select: none;`
-    );
-  })();
-</script>
+      );
+    })();
+  </script>
+</Layout>

@@ -37,7 +37,6 @@ import RightOrangeFoliageSB from "../widgets/RightOrangeFoliagesb.astro";
       <div class="btncontact">
         <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
       </div>
-
     </div>
   </section>
 
@@ -80,10 +79,16 @@ import RightOrangeFoliageSB from "../widgets/RightOrangeFoliagesb.astro";
         <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
       </div>
     </div>
-
   </section>
 </Layout>
 <style>
+
+  p {
+    text-align: justify;
+    word-spacing: -2px;
+  
+  }
+
   .first-content {
     display: flex;
     position: relative;
@@ -217,7 +222,6 @@ import RightOrangeFoliageSB from "../widgets/RightOrangeFoliagesb.astro";
   }
 
   @media screen and (width > 430px) and (width <= 960px) {
-
     .first-content {
       display: block;
       position: relative;
@@ -256,7 +260,7 @@ import RightOrangeFoliageSB from "../widgets/RightOrangeFoliagesb.astro";
     .deuxieme {
       margin-top: 0rem !important;
       background-color: transparent;
-      z-index: -1
+      z-index: -1;
     }
   }
 
@@ -268,9 +272,9 @@ import RightOrangeFoliageSB from "../widgets/RightOrangeFoliagesb.astro";
     }
     .first-content .comment {
       position: relative;
-      top:-2rem;
-      padding-right: 1rem;;
-    } 
+      top: -2rem;
+      padding-right: 1rem;
+    }
 
     .first-content .btncontact {
       margin-top: 0;
@@ -285,15 +289,14 @@ import RightOrangeFoliageSB from "../widgets/RightOrangeFoliagesb.astro";
     }
 
     .deuxieme {
-      margin-top: -3rem;;
+      margin-top: -3rem;
     }
 
     .deuxieme .comment {
       position: relative;
-      top:-2rem;
+      top: -2rem;
     }
   }
-
 </style>
 
 <script>
