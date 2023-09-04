@@ -7,7 +7,7 @@ import TelephoneSticky from "../widgets/TelephoneSticky.astro";
 ---
 
 <div class="myfooter">
-  <div style="position:absolute;right:13rem;">
+  <div class="social" style="position:absolute;right:12rem;transform:scale(0.8);top:7.5rem;">
     <Social />
   </div>
   <div style="position:absolute; bottom:2rem;">
@@ -16,31 +16,56 @@ import TelephoneSticky from "../widgets/TelephoneSticky.astro";
   <div class="wave"><Wave /></div>
   <div>
     <div class="center navfooter">
-      <div id="contact">
+      <div>
         <RdvsButtonFooter />
       </div>
-
       <div class="links">
-        <a>ACCUEIL</a>
-        <a>À PROPOS</a>
-        <a>SÉANCES</a>
-        <a>TARIFS</a>
-        <a>CONTACTS</a>
+        <a href="/accueil">ACCUEIL</a>
+        <a href="/apropos">À PROPOS</a>
+        <a href="/seances">SÉANCES</a>
+        <a href="/tarifs">TARIFS</a>
+        <a href="/contacts">CONTACTS</a>
+      </div>
+      <div class="adresse">
+        <a href="https://www.google.com/maps/place/Fran%C3%A7oise+Lefeuvre+-+Praticienne+en+hypnose+ericksonienne+-+Paris+20/@48.8578636,2.3891272,14.74z/data=!3m1!5s0x47e67209c5ba51e1:0xec23dc7d96a8fe46!4m14!1m7!3m6!1s0x47e67303acd3e371:0xbeb2ab80431345b1!2s%F0%9F%8F%BB%E2%80%8D+%EF%B8%8F+Fran%C3%A7oise+Lefeuvre+-+Praticienne+en+hypnose+ericksonienne+-+Paris+11!8m2!3d48.8546266!4d2.3816881!16s%2Fg%2F11h_wy51b8!3m5!1s0x47e66dca4a7a52f7:0x8f4cb19e271b8d1a!8m2!3d48.8574478!4d2.4000833!16s%2Fg%2F11s8dm_r2j">
+          Cabinet paramédical au 6 rue de Fontarabie 75020
+        </a>
+      </div>
+      <div class="siret">
+        Francoise Lefeuvre - Siret 795 241 546 00014
       </div>
     </div>
   </div>
 
   <style>
+
+    .social {
+      position:absolute;right:12rem;transform:scale(0.8);top:7.5rem;
+    }
+
+    .siret {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      text-align:center;
+   
+    }
+
+    .adresse {
+      text-decoration: underline;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    
+      font-size: 1rem;
+    }
+
     .navfooter {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: white;
       position: relative;
-      top:-1rem;
+      top:0.5rem;
       font-size:0.90rem;
     }
     .links {
       margin-top:0.5rem;
-      
+      text-align:center;
     }
     .myfooter {
       height: 16rem;
