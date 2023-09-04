@@ -10,8 +10,8 @@ import HeroMassage from "../components/HeroOther.astro";
 
    <div class="main">
     <div flex:0.5>
-      <div>
-        <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=2.39852249622345%2C48.85693817263442%2C2.400898933410645%2C48.85803759133688&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=19/48.85749/2.39971"></a></small>
+      <div style="min-width:425px">
+        <iframe width="100%" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=2.39852249622345%2C48.85693817263442%2C2.400898933410645%2C48.85803759133688&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=19/48.85749/2.39971"></a></small>
       </div>
     </div>
     <div flex:0.5>
@@ -41,6 +41,7 @@ import HeroMassage from "../components/HeroOther.astro";
     padding-bottom: 3rem;
     padding-left:3rem;
     padding-right:3rem;
+    flex-wrap: wrap;
    
   }
 
