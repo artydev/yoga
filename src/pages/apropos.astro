@@ -2,16 +2,16 @@
 import Layout from "../layouts/Layout.astro";
 import HeroMassage from "../components/HeroOther.astro";
 import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
-import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
+import RightOrangeFoliageSB from "../widgets/RightOrangeFoliagesb.astro";
 ---
 
 <Layout>
-  <div class="container mt-16">
+  <div class="mt-16">
     <HeroMassage titre="A PROPOS" />
   </div>
   <section class="first-content">
     <div style="flex:0.5;">
-      <div class="imgfirstcontent">
+      <div class="imgfirstcontent firstimg">
         <img src="/assets/index/asiatapropos.png" width="100%" />
       </div>
     </div>
@@ -37,17 +37,22 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
       <div class="btncontact">
         <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
       </div>
+
     </div>
   </section>
 
   <div class="foliage">
-    <RightOrangeFoliage />
+    <RightOrangeFoliageSB />
   </div>
 
-
-  <section class="second-content">
-    <div style="flex:1;margin-left:2rem;">
-      <div class="comment" style="margin-right:0">
+  <section class="first-content deuxieme">
+    <div style="flex:0.5;">
+      <div class="imgfirstcontent sndimg">
+        <img src="/assets/index/orangeblobplume.png" width="100%" />
+      </div>
+    </div>
+    <div style="flex:0.5">
+      <div class="comment">
         <div class="head">SOINS ÉNERGÉTIQUES</div>
         <p>
           Les soins énergétiques s'adressent à tous ceux qui acceptent que notre
@@ -71,15 +76,11 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
           manière préventive et régulière.
         </p>
       </div>
-      <div style="width:150px;margin-top:6rem;">
+      <div class="btncontact" style="height:5rem">
         <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
       </div>
     </div>
-    <div style="position:relative;top:4rem;flex:1">
-      <div style="max-width:65%;margin:0 auto">
-        <img src="/assets/index/orangeblobplume.png" width="100%" />
-      </div>
-    </div>
+
   </section>
 </Layout>
 <style>
@@ -90,7 +91,7 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
     margin-top: 3rem;
   }
 
-  .comment {
+  .first-content .comment {
     font-size: 1.1rem;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: white;
@@ -99,6 +100,23 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
     margin-right: 2rem;
     position: relative;
     top: 3rem;
+  }
+
+  .second-content .comment {
+    font-size: 1.1rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: white;
+    font-weight: 400;
+    color: #2c2c5f;
+    margin-right: 2rem;
+    position: relative;
+    top: 3rem;
+    padding-right: 1rem;
+  }
+
+  .second-content .btncontact {
+    width: 150px;
+    margin-top: 6rem;
   }
 
   .comment > p {
@@ -119,15 +137,16 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
     margin-top: 1rem;
   }
 
+  .wrapimgsecondcontent {
+    display: flex;
+    justify-content: space-around;
+  }
+
   .second-content {
     display: flex;
     justify-content: space-around;
     position: relative;
     top: -3rem;
-  }
-
-  .second-content img {
-    transform: scale(1.3);
   }
 
   .petipasblue {
@@ -145,7 +164,8 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
   }
 
   .btncontact {
-    width:150px;margin-top:6rem;
+    width: 150px;
+    margin-top: 6rem;
   }
 
   @media screen and (width <= 430px) {
@@ -157,26 +177,123 @@ import RightOrangeFoliage from "../widgets/RightOrangeFoliage.astro";
     .foliage {
       display: none;
     }
-  }
 
-  @media screen and (width <= 1024px) {
     .first-content {
       display: block;
       position: relative;
       top: -5rem;
     }
-
-    .comment {
-      margin:0 auto;
-      max-width: 90%;
+    .first-content .comment {
+      margin: 0 auto;
+      max-width: 85%;
       position: relative;
-      top:-1rem;
+      top: -0.5rem;
     }
-
-    .head {
+    .first-content .head {
       text-align: center;
     }
+
+    .second-content {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .second-content .wrapimgsecondcontent {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    .second-content .head {
+      text-align: center;
+    }
+
+    .second-content .btncontact {
+      padding-right: 3rem;
+      padding-left: 3rem;
+      width: 100%;
+      position: relative;
+      right: 1rem;
+    }
   }
+
+  @media screen and (width > 430px) and (width <= 960px) {
+
+    .first-content {
+      display: block;
+      position: relative;
+      top: -5rem;
+    }
+    .first-content .head {
+      text-align: center;
+    }
+
+    .first-content .comment {
+      margin: 0 auto;
+      max-width: 75%;
+      position: relative;
+      top: 0.5rem;
+    }
+
+    .imgfirstcontent {
+      position: relative;
+      top: 1rem;
+    }
+
+    .btncontact {
+      width: auto;
+      margin-top: 3rem;
+    }
+
+    .foliage {
+      height: 0rem;
+      position: relative;
+      top: -9rem;
+      left: 2rem;
+      width: 94%;
+      transform: scale(0.95);
+    }
+
+    .deuxieme {
+      margin-top: 0rem !important;
+      background-color: transparent;
+      z-index: -1
+    }
+  }
+
+  @media screen and (width > 960px) {
+    .first-content {
+      display: flex;
+      gap: 0rem;
+      margin-top: 0px;
+    }
+    .first-content .comment {
+      position: relative;
+      top:-2rem;
+      padding-right: 1rem;;
+    } 
+
+    .first-content .btncontact {
+      margin-top: 0;
+    }
+
+    .firstimg {
+      margin-top: 2rem;
+    }
+
+    .sndimg {
+      margin-top: 2rem;
+    }
+
+    .deuxieme {
+      margin-top: -3rem;;
+    }
+
+    .deuxieme .comment {
+      position: relative;
+      top:-2rem;
+    }
+  }
+
 </style>
 
 <script>
