@@ -25,7 +25,7 @@ var dev = true;
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.1.2/ionicons/ionicons.esm.js"
     ></script>
-    <title>YOGA</title>
+    <title>Hypnose Paris</title>
   </head>
 
   <body>
@@ -105,16 +105,19 @@ var dev = true;
         const svggoog = document.querySelector(".es-badge-sources-container")
         const reviews = document.querySelector(".es-badge-total-reviews");
         observer.observe(stickyElm);
-        svggoog.style.display = "none";
-        reviews.style.display = "none";
+        //svggoog.style.display = "none";
+        //reviews.style.display = "none";
         stickyElm.style = `
           position: fixed;
-          height: 2.5rem;
+          
           bottom: -0.6rem;
           left: -0.99rem;
           z-index:1000;
         `;
       }, 5000);
+    </script>
+    <script>
+      console.log("TEST")
     </script>
   </body>
 </html>

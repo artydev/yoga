@@ -7,10 +7,10 @@ import compress from "astro-compress";
 export default defineConfig({
   integrations: [tailwind(), compress(
     {
-			css: true,
-			html: true,
+			css: false,
+			html: false,
 			img: true,
-			js: true,
+			js: false,
 			svg: true,
 		}
   )]

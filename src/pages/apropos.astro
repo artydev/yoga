@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import HeroMassage from "../components/HeroOther.astro";
-import ContactezMoi from "../widgets/ButtonOrangeRed.astro";
+import ContactezMoi from "../widgets/ButtonOrangeRedMail.astro";
 import RightOrangeFoliageSB from "../widgets/RightOrangeFoliagesb.astro";
 ---
 
@@ -20,20 +20,24 @@ import RightOrangeFoliageSB from "../widgets/RightOrangeFoliagesb.astro";
       <div class="comment">
         <div class="head">HYPNOSE</div>
         <p>
-          Avant d’être une thérapie, l’expérience hypnotique est un état naturel que nous connaissons
-          tous pendant la lecture d’un livre ou devant un film par exemple. À ce moment-là, notre
-          attention est captée et nous sommes « hypnotisés » car nous perdons la notion du temps et
-          de l&#39;espace. C’est souvent un état très agréable qui laisse la place à l’imagination.
+          Avant d’être une thérapie, l’expérience hypnotique est un état naturel
+          que nous connaissons tous pendant la lecture d’un livre ou devant un
+          film par exemple. À ce moment-là, notre attention est captée et nous
+          sommes « hypnotisés » car nous perdons la notion du temps et de
+          l&#39;espace. C’est souvent un état très agréable qui laisse la place
+          à l’imagination.
         </p>
         <p>
-          En séance, nous allons recréer en toute sécurité cet état de conscience modifié (état de
-          « transe ») afin de donner libre court à l’imagination et accéder à vos ressources inconscientes
+          En séance, nous allons recréer en toute sécurité cet état de
+          conscience modifié (état de « transe ») afin de donner libre court à
+          l’imagination et accéder à vos ressources inconscientes
         </p>
         <p>
-          Une part de vous reste conscient(e) pendant toute la séance pendant qu’une autre part de
-vous entre dans le voyage hypnotique. L’hypnose s’apprend. Au fur et à mesure des séances,
-vous serez à même de vous libérer de certains conditionnements pour retrouver plus de
-liberté et d&#39;autonomie.
+          Une part de vous reste conscient(e) pendant toute la séance pendant
+          qu’une autre part de vous entre dans le voyage hypnotique. L’hypnose
+          s’apprend. Au fur et à mesure des séances, vous serez à même de vous
+          libérer de certains conditionnements pour retrouver plus de liberté et
+          d&#39;autonomie.
         </p>
       </div>
       <div class="btncontact">
@@ -84,11 +88,9 @@ liberté et d&#39;autonomie.
   </section>
 </Layout>
 <style>
-
   p {
     text-align: justify;
     word-spacing: -2px;
-  
   }
 
   .citation {
@@ -339,4 +341,13 @@ liberté et d&#39;autonomie.
       foliage.style.top = "100px";
     }
   })();
+</script>
+
+<script>
+  document.querySelectorAll(".btncontact")?.forEach((e) => {
+    e.addEventListener("click", (e) => {
+      e.preventDefault();
+      globalThis.sendMail();
+    });
+  });
 </script>

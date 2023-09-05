@@ -1,1 +1,1 @@
-# yoga
+# Hypnose Paris
