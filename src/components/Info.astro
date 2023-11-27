@@ -2,23 +2,17 @@
 import ContactezMoi from "../widgets/ButtonOrangeRedMail.astro";
 ---
 
+
 <div class="infopanel">
   <div class="title">
-    <div>HYPNOSE</div>
-    <div>& SOINS ÉNERGÉTIQUES</div>
-  </div>
-  <p class="content">
-    <b>C</b>ertifiée maître praticienne en hypnose Ericksonienne par l&#39;<b
-      >A</b
-    >cadémie pour la <b>R</b>echerche et la
-    <b>C</b>onnaissance de l&#39;<b>H</b>ypnose <b>E</b>ricksonienne (Arche -
-    Paris), je suis également initiée à plusieurs techniques de soins
-    énergétiques et au <b>Reiki</b>
-  </p>
-  <div style="font-style:normal" id="contactInfo">
-    <ContactezMoi>CONTACTEZ-MOI</ContactezMoi>
+    <div class="name">Francoise LEFEUVRE </div>
+    <div>Maître praticienne en hypnose ericksonienne</div>
+     <div>&</div>
+     <div>Soins énergétiques</div>
+    <div class="lieu">À Paris et à distance</div>
   </div>
 </div>
+
 
 <style>
   .infopanel {
@@ -32,14 +26,25 @@ import ContactezMoi from "../widgets/ButtonOrangeRedMail.astro";
     margin-left: 2rem;
     margin-right: 2rem;
     margin: 0 auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem;
+    padding-top:1rem;
     color: #2c2c5f;
     background: rgba(255, 255, 255, 0.69);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.4px);
     -webkit-backdrop-filter: blur(8.4px);
     z-index: 1;
+  }
+
+  .lieu {
+    padding-top:1rem;
+    font-size: 1.15rem;
+    font-weight:600;
+
+  }
+
+  .name {
+    padding:1rem;
   }
 
   .content {
@@ -53,9 +58,9 @@ import ContactezMoi from "../widgets/ButtonOrangeRedMail.astro";
     color: #f05907;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0 auto;
-    font-weight: 600;
+    
     text-align: center;
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
   }
 
   @media (width <= 390px) {
