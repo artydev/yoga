@@ -5,14 +5,6 @@ import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), compress(
-    {
-			css: false,
-			html: false,
-			img: true,
-			js: false,
-			svg: true,
-		}
-  )]
+  integrations: [tailwind()]
 } // Here is you configure your app
 );
