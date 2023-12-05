@@ -4,13 +4,13 @@ import ContactezMoi from "../widgets/ButtonOrangeRedMail.astro";
 
 
 <div class="infopanel">
-  <div class="title">
-    <div class="name">Francoise LEFEUVRE </div>
-    <div>Maître praticienne en hypnose ericksonienne</div>
-     <div>&</div>
-     <div>Soins énergétiques</div>
+ 
+    <div class="name title0">Francoise LEFEUVRE </div>
+    <div class="title">Maître praticienne en hypnose ericksonienne</div>
+     <div class="ampersand">&</div>
+     <div class="subtitle">Praticienne en soins énergétiques</div>
     <div class="lieu">À Paris et à distance</div>
-  </div>
+  
 </div>
 
 
@@ -19,7 +19,7 @@ import ContactezMoi from "../widgets/ButtonOrangeRedMail.astro";
     font-family: "Segoe UI";
     font-weight: 400;
     font-size: 2rem;
-    max-width: 80%;
+    width: 80%;
     margin: 0 auto;
     position: relative;
     top: -0.9rem;
@@ -29,7 +29,8 @@ import ContactezMoi from "../widgets/ButtonOrangeRedMail.astro";
     padding: 2rem;
     padding-top:1rem;
     color: #2c2c5f;
-    background: rgba(255, 255, 255, 0.69);
+    background: rgba(255, 255, 255);
+    opacity: 80%;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.4px);
     -webkit-backdrop-filter: blur(8.4px);
@@ -38,9 +39,18 @@ import ContactezMoi from "../widgets/ButtonOrangeRedMail.astro";
 
   .lieu {
     padding-top:1rem;
-    font-size: 1.15rem;
-    font-weight:600;
+    font-size: 1.415rem;
+   
+     text-align:center;
+     color: #f05907;
+  }
 
+  .ampersand {
+    padding-top:1rem;
+    font-size: 1.59rem;
+
+     text-align:center;
+     color: #f05907;
   }
 
   .name {
@@ -52,15 +62,31 @@ import ContactezMoi from "../widgets/ButtonOrangeRedMail.astro";
     margin: 0 auto;
     font-size: clamp(1rem, 2.5vw, 1.3rem);
     text-align: center;
+    
+  }
+
+  .title0 {
+    color: #f05907;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    font-size: clamp(3rem, 2vw, 3.5rem);
   }
 
   .title {
     color: #f05907;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0 auto;
-    
     text-align: center;
-    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    font-size: clamp(2rem, 1.3vw, 2.5rem);
+  }
+
+  .subtitle {
+    color: #f05907;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    font-size: clamp(1.63rem, 1.3vw, 1.98rem);
   }
 
   @media (width <= 390px) {
